@@ -24,7 +24,7 @@ export default defineConfig({
       input: {
         // resolve the reload button for SPA routing
         main: resolve(root, "index.html"),
-        about: resolve(root, "about", "index.html"),
+        sports: resolve(root, "sports", "index.html"),
         contact: resolve(root, "contact", "index.html"),
       },
     },
