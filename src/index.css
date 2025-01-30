@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+.webkitAutoFillOverride:-webkit-autofill,
+.webkitAutoFillOverride:-webkit-autofill:hover,
+.webkitAutoFillOverride:-webkit-autofill:focus,
+.webkitAutoFillOverride:-webkit-autofill:active {
+  transition: background-color 1000s ease-in-out 0s !important;
+  -webkit-text-fill-color: #fff;
+}
+
+.tooltip {
+  @apply invisible absolute;
+}
+
+.has-tooltip:hover .tooltip {
+  @apply visible z-50;
+}
+
+/* ##### AnimatedPageSlider ####### */
+
+.carousel {
+  @apply relative h-screen w-screen overflow-hidden;
+}
+.carousel .list .carouselitem {
+  @apply absolute left-[70%] top-[80%] z-10 h-[150px] w-[150px] translate-y-[-20%] rounded-[20px] bg-cover bg-center shadow-2xl transition-all duration-1000 sm:h-[180px] sm:w-[180px] sm:translate-y-[-70%];
+}
+
+.carousel .list .carouselitem:nth-child(1),
+.carousel .list .carouselitem:nth-child(2) {
+  @apply left-0 top-0 h-full w-full translate-x-0 translate-y-0 rounded-none;
+}
+.carousel .list .carouselitem:nth-child(3) {
+  @apply left-[47%] sm:left-[67%];
+}
+.carousel .list .carouselitem:nth-child(4) {
+  @apply left-[calc(47%_+_170px)] sm:left-[calc(67%_+_200px)];
+}
+.carousel .list .carouselitem:nth-child(5) {
+  @apply left-[calc(47%_+_400px)] sm:left-[calc(67%_+_400px)];
+}
+.carousel .list .carouselitem:nth-child(6) {
+  @apply left-[calc(47%_+_600px)] sm:left-[calc(67%_+_600px)];
+}
+.carousel .list .carouselitem:nth-child(n + 7) {
+  @apply left-[calc(47%_+_800px)] opacity-0 sm:left-[calc(67%_+_800px)];
+}
+.list .carouselitem .content {
+  @apply absolute px-[5%] hidden pt-10 text-left h-full text-white sm:w-[60%] md:w-[50%] sm:pt-20;
+}
+.list .carouselitem:nth-child(2) .content {
+  @apply block bg-gradient-to-r from-black from-20% via-black/20 via-90% to-transparent;
+}
+.arrows {
+  @apply absolute left-[5%] top-[90%] z-10 flex w-[200px] max-w-[30%] translate-y-[-20%] gap-2.5;
+}
+.arrows button {
+  @apply h-[50px] w-[50px] cursor-pointer bg-primaryGreen font-mono text-base text-white transition-colors duration-300 hover:bg-white hover:text-primaryGreen;
+}
+/* name duration, timing_function delay iteration direction  */
+@keyframes blurScale {
+  from {
+    opacity: 0;
+    transform: translate(0, 100px);
+    filter: blur(33px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0);
+    filter: blur(0);
+  }
+}
