@@ -49,7 +49,7 @@ const AnimatedPageSlider = ({ data }) => {
               <div className="lg:text-5xl text-2xl pt-20 lg:pt-8 uppercase font-bold text-white opacity-0 animate-[blurScale_700ms_ease-in-out_300ms_1_forwards]">
                 {slide.name}
               </div>
-              <div className="lg:text-md text-sm opacity-0 animate-[blurScale_700ms_ease-in-out_300ms_1_forwards] mt-2.5 mb-2">
+              <div className="lg:text-md text-sm opacity-0 text-justify animate-[blurScale_700ms_ease-in-out_300ms_1_forwards] mt-2.5 mb-2">
                 {slide.desc.map((desc, i) => (
                   <p className="font-serif p-2" key={i}>
                     {desc}
@@ -60,7 +60,7 @@ const AnimatedPageSlider = ({ data }) => {
                 {slide.tag}
               </div>
               {/* <div className="opacity-0 animate-[blurScale_500ms_ease-in-out_0.5s_1_forwards] ml-1 "> */}
-              <div className=" w-full opacity-0 flex-col gap-2.5 sm:flex-row sm:justify-center lg:justify-start animate-[blurScale_700ms_ease-in-out_300ms_1_forwards] hidden sm:flex ">
+              <div className=" w-full opacity-0 flex-col gap-2.5 sm:flex-row sm:justify-start lg:justify-start animate-[blurScale_700ms_ease-in-out_300ms_1_forwards] hidden sm:flex ">
                 {slide.btn1Link.length > 0 && (
                   <a
                     href={slide.btn1Link}

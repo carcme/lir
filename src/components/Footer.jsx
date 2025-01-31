@@ -28,7 +28,7 @@ export const Footer = () => {
                   <h2 className="hover-diagonal-line before:font-Jost relative mb-10 pt-8 text-[18px] font-semibold tracking-widest text-white before:absolute before:-left-0 before:-top-2 before:block before:text-[10px] before:font-normal before:content-['01'] after:absolute after:left-6 after:top-1 after:block after:h-0.5 after:w-6 after:overflow-hidden after:bg-white">
                     Our Address
                   </h2>
-                  <div className="flex items-center justify-center gap-4 pb-8 lg:justify-start">
+                  <div className="flex gap-4 pb-8 lg:justify-start">
                     <div className="flex gap-4">
                       {/* instagram */}
                       <Link
