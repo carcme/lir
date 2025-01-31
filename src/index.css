@@ -35,7 +35,7 @@
   @apply relative h-screen w-screen overflow-hidden;
 }
 .carousel .list .carouselitem {
-  @apply absolute left-[70%] top-[80%] z-10 h-[150px] w-[150px] translate-y-[10%] rounded-[20px] bg-cover bg-center shadow-2xl transition-all duration-1000 sm:h-[180px] sm:w-[180px] sm:translate-y-[-70%];
+  @apply absolute left-[70%] top-[80%] z-10 h-[150px] w-[150px] translate-x-[100%] rounded-[20px] bg-cover bg-center shadow-2xl transition-all duration-1000 sm:h-[180px] sm:w-[180px] sm:translate-y-[-70%] sm:translate-x-[0%];
 }
 
 .carousel .list .carouselitem:nth-child(1),
