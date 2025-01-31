@@ -118,6 +118,7 @@ const Navbar = () => {
             className={({ isActive }) =>
               isActive ? " text-white " : "text-gray-400"
             }
+            onClick={() => setOpen(false)}
           >
             <li className="z-50 p-4 duration-300 border-b border-primaryGreen  cursor-pointer hover:border-gray-400 hover:font-extrabold hover:text-white ">
               {item.text}
