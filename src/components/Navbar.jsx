@@ -72,8 +72,8 @@ const Navbar = () => {
               className="bg-transparent hover:bg-primaryGreenDark border-primaryGreenDark border-2 p-3 rounded-full transition duration-300 hover:cursor-pointer"
               aria-label="Show mysteries"
             >
-              <div class="has-tooltip">
-                <span class="tooltip rounded shadow-lg p-1 bg-gray-300 text-primaryGreen -mb-20 -ml-28">
+              <div className="has-tooltip">
+                <span className="tooltip rounded shadow-lg p-1 bg-gray-300 text-primaryGreen -mb-20 -ml-28">
                   Sports Schedule
                 </span>
                 <PiTelevisionSimpleBold size={16} color="#eee" />
@@ -86,8 +86,8 @@ const Navbar = () => {
               className="bg-primaryGreenDark hover:bg-primaryGreenDark/20 border-primaryGreenDark border-2 p-3 rounded-full transition duration-300 hover:cursor-pointer"
               aria-label="Contact"
             >
-              <div class="has-tooltip">
-                <span class="tooltip rounded shadow-lg p-1 bg-gray-300 text-primaryGreen -mb-20 -ml-28">
+              <div className="has-tooltip">
+                <span className="tooltip rounded shadow-lg p-1 bg-gray-300 text-primaryGreen -mb-20 -ml-28">
                   Contact Us
                 </span>
                 <FaEnvelope size={16} color="#eee" />

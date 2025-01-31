@@ -23,7 +23,9 @@ const AnimatedPageSlider = ({ data }) => {
     const arrSlides = list.querySelectorAll(".carousel .list .carouselitem");
 
     if (type === "next") {
+      console.log("🚀 ~ beofer ~ listRef.current:", listRef.current);
       listRef.current.appendChild(arrSlides[0]);
+      console.log("🚀 ~ after ~ listRef.current:", listRef.current);
     } else if (type === "prev") {
       listRef.current.prepend(arrSlides[arrSlides.length - 1]);
     }
@@ -54,7 +56,7 @@ const AnimatedPageSlider = ({ data }) => {
                   </p>
                 ))}
               </div>
-              <div className="lg:text-lg text-green-400 text-sm opacity-0 animate-[blurScale_700ms_ease-in-out_300ms_1_forwards] ml-2 mb-2">
+              <div className="lg:text-lg text-green-400 text-sm opacity-0 animate-[blurScale_700ms_ease-in-out_300ms_1_forwards] ml-2 mb-5">
                 {slide.tag}
               </div>
               {/* <div className="opacity-0 animate-[blurScale_500ms_ease-in-out_0.5s_1_forwards] ml-1 "> */}

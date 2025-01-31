@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useLanguage } from "../context/LanguageContext";
 
 const Contact = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <div className="flex flex-col gap-4 items-center justify-center w-full h-screen text-3xl font-bold text-center bg-neutral-700 text-neutral-300">
