@@ -5,6 +5,10 @@ const navbarLinks = {
       text: "home",
     },
     {
+      path: "/menu",
+      text: "menu",
+    },
+    {
       path: "/sports",
       text: "sports",
     },
@@ -17,6 +21,10 @@ const navbarLinks = {
     {
       path: "/",
       text: "home",
+    },
+    {
+      path: "/menu",
+      text: "Menü",
     },
     {
       path: "/sports",

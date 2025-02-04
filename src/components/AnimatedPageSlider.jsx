@@ -60,11 +60,11 @@ const AnimatedPageSlider = ({ data }) => {
                 {slide.tag}
               </div>
               {/* <div className="opacity-0 animate-[blurScale_500ms_ease-in-out_0.5s_1_forwards] ml-1 "> */}
-              <div className=" w-full opacity-0 flex-col gap-2.5 sm:flex-row sm:justify-start lg:justify-start animate-[blurScale_700ms_ease-in-out_300ms_1_forwards] hidden sm:flex ">
+              <div className=" w-full opacity-0 flex-col gap-2.5 sm:flex-row sm:justify-start lg:justify-start animate-[blurScale_700ms_ease-in-out_300ms_1_forwards] flex">
                 {slide.btn1Link.length > 0 && (
                   <a
                     href={slide.btn1Link}
-                    className="inline-block rounded-lg sm:bg-primaryGreen px-4 py-3 text-center text-sm font-semibold text-white ring-0 ring-white  transition duration-100 hover:bg-primaryGreenDark focus-visible:ring active:bg-accentDecoration md:text-base bg-black/50"
+                    className="inline-block rounded-lg sm:bg-primaryGreen px-4 py-3 text-center text-sm font-semibold text-white ring-1 ring-white  transition duration-100 hover:bg-primaryGreenDark focus-visible:ring active:bg-accentDecoration md:text-base bg-black/50"
                   >
                     {slide.btn1}
                   </a>
@@ -74,7 +74,7 @@ const AnimatedPageSlider = ({ data }) => {
                     href={slide.btn2Link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block rounded-lg sm:bg-white px-4 py-3 text-center text-sm font-semibold text-white sm:text-primaryGreen ring-0 ring-white transition duration-100 hover:bg-primaryGreen hover:text-white focus-visible:ring active:text-primaryGreen md:text-base bg-black/50"
+                    className="inline-block rounded-lg sm:bg-white px-4 py-3 text-center text-sm font-semibold text-white sm:text-primaryGreen ring-1 ring-white transition duration-100 hover:bg-primaryGreen hover:text-white focus-visible:ring active:text-primaryGreen md:text-base bg-black/50"
                   >
                     {slide.btn2}
                   </a>

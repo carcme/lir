@@ -1,4 +1,3 @@
-import Pdf from "/assets/Menu.pdf";
 import Relexed from "/assets/images/lir_relaxed_pub_garden.webp";
 import Glow from "/assets/images/lir_bar_warm_glow.webp";
 import Sports from "/assets/images/lir_outside_sports.webp";
@@ -19,7 +18,7 @@ const AnimatedPageSliderData = {
       btn1: "Sport Schedule",
       btn2: "Menu",
       btn1Link: "/sports",
-      btn2Link: Pdf,
+      btn2Link: "/menu",
     },
     {
       id: 1,
@@ -34,7 +33,7 @@ const AnimatedPageSliderData = {
       btn1: "Sport Schedule",
       btn2: "Menu",
       btn1Link: "/sports",
-      btn2Link: Pdf,
+      btn2Link: "/menu",
     },
     {
       id: 2,
@@ -48,7 +47,7 @@ const AnimatedPageSliderData = {
       btn1: "Sport Schedule",
       btn2: "Menu",
       btn1Link: "/sports",
-      btn2Link: Pdf,
+      btn2Link: "/menu",
     },
 
     {
@@ -63,7 +62,7 @@ const AnimatedPageSliderData = {
       btn1: "Sport Schedule",
       btn2: "Menu",
       btn1Link: "/sports",
-      btn2Link: Pdf,
+      btn2Link: "/menu",
     },
     {
       id: 4,
@@ -77,7 +76,7 @@ const AnimatedPageSliderData = {
       btn1: "Sport Schedule",
       btn2: "Menu",
       btn1Link: "/sports",
-      btn2Link: Pdf,
+      btn2Link: "/menu",
     },
     // {
     //   id: 5,
@@ -118,7 +117,7 @@ const AnimatedPageSliderData = {
       btn1: "Sporttermine",
       btn2: "Menü",
       btn1Link: "/sports",
-      btn2Link: Pdf,
+      btn2Link: "/menu",
     },
     {
       id: 1,
@@ -132,7 +131,7 @@ const AnimatedPageSliderData = {
       btn1: "Sporttermine",
       btn2: "Menü",
       btn1Link: "/sports",
-      btn2Link: Pdf,
+      btn2Link: "/menu",
     },
     {
       id: 2,
@@ -147,7 +146,7 @@ const AnimatedPageSliderData = {
       btn1: "Sporttermine",
       btn2: "Menü",
       btn1Link: "/sports",
-      btn2Link: Pdf,
+      btn2Link: "/menu",
     },
     {
       id: 3,
@@ -161,7 +160,7 @@ const AnimatedPageSliderData = {
       btn1: "Sporttermine",
       btn2: "Menü",
       btn1Link: "/sports",
-      btn2Link: Pdf,
+      btn2Link: "/menu",
     },
     {
       id: 4,
@@ -175,7 +174,7 @@ const AnimatedPageSliderData = {
       btn1: "Sporttermine",
       btn2: "Menü",
       btn1Link: "/sports",
-      btn2Link: Pdf,
+      btn2Link: "/menu",
     },
   ],
 };

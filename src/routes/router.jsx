@@ -4,6 +4,9 @@ import Home from "./Home";
 import Sports from "./Sports";
 import Contact from "./Contact";
 import Error from "./Error";
+import Temp from "./Temp";
+import Menu from "./Menu";
+import SinglePost from "./SinglePost";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +16,22 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
+      },
+      {
+        path: "/menu/:id",
+        element: <SinglePost />,
+      },
+      {
+        path: "/menu/:slug",
+        element: <SinglePost />,
+      },
+      {
+        path: "/menu",
+        element: <Menu />,
+      },
+      {
+        path: "/temp",
+        element: <Temp />,
       },
       {
         path: "/sports",

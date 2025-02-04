@@ -10,7 +10,7 @@ import {
 } from "react-icons/fa";
 import { getLanguage, useLanguage } from "../context/LanguageContext";
 import navData from "../data/navbarLinks";
-import Pdf from "/assets/Menu.pdf";
+import Pdf from "/assets/pdf/Menu.pdf";
 import DirectionsImg from "/assets/directions.webp";
 
 export const Footer = () => {

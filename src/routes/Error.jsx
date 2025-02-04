@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const Home = () => {
   console.log("Error page");
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <div className="py-6 pt-20 bg-white lg:pt-28 lg:py-12">

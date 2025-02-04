@@ -5,6 +5,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400|Inconsolata:400");
 
 @tailwind base;
 @tailwind components;
@@ -21,6 +22,16 @@
   -webkit-text-fill-color: #fff;
 }
 
+.page {
+  width: 90vw;
+  max-width: 1120px;
+  margin: 0rem auto;
+  padding-top: 8rem;
+}
+.page {
+  min-height: calc(100vh - (20rem + 2.1rem));
+}
+
 .tooltip {
   @apply invisible absolute;
 }
@@ -35,7 +46,7 @@
   @apply relative h-screen w-screen overflow-hidden;
 }
 .carousel .list .carouselitem {
-  @apply absolute left-[70%] top-[80%] z-10 h-[150px] w-[150px] translate-x-[100%] rounded-[20px] bg-cover bg-center shadow-2xl transition-all duration-1000 sm:h-[180px] sm:w-[180px] sm:translate-y-[-70%] sm:translate-x-[0%];
+  @apply absolute left-[70%] sm:top-[80%] top-[-15%] z-10 h-[150px] w-[150px] translate-x-[100%] rounded-[20px] bg-cover bg-center shadow-2xl transition-all duration-1000 sm:h-[180px] sm:w-[180px] sm:translate-y-[-70%] sm:translate-x-[0%];
 }
 
 .carousel .list .carouselitem:nth-child(1),
@@ -43,7 +54,7 @@
   @apply left-0 top-0 h-full w-full translate-x-0 translate-y-0 rounded-none;
 }
 .carousel .list .carouselitem:nth-child(3) {
-  @apply left-[47%] sm:left-[67%];
+  @apply left-[-47%] sm:left-[67%];
 }
 .carousel .list .carouselitem:nth-child(4) {
   @apply left-[calc(47%_+_170px)] sm:left-[calc(67%_+_200px)];
@@ -81,5 +92,14 @@
     opacity: 1;
     transform: translate(0);
     filter: blur(0);
+  }
+}
+@keyframes sepiaImage {
+  from {
+    filter: sepia(100%);
+  }
+
+  to {
+    filter: sepia(0%);
   }
 }

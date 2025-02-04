@@ -21,6 +21,11 @@ const Navbar = () => {
   const changeLanguage = useLanguageChange();
   const navbarLinks = getLanguage(LinksData);
 
+  const langClicked = () => {
+    setOpen(false);
+    changeLanguage();
+  };
+
   return (
     <div
       className={`flex fixed justify-between items-center h-20 xl:px-40 mx-auto px-2 text-white 
@@ -128,7 +133,7 @@ const Navbar = () => {
         <button
           className="z-50 cursor-pointer p-4 duration-300"
           aria-label="language"
-          onClick={changeLanguage}
+          onClick={langClicked}
         >
           {language === "de" && <span className="fi fi-gb fib"></span>}
           {language === "en" && <span className="fi fi-de fib"></span>}

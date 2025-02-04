@@ -10,6 +10,7 @@ export default {
         Alegreya: ["Alegreya"],
         English: ["IM Fell English"],
         Cormorant: ["Cormorant Garamond"],
+        Inconsolata: ["Inconsolata"],
       },
       colors: {
         accentDecoration: "#566E3D",

@@ -19,6 +19,12 @@ const helmetData = {
     keysSports:
       "irish pub berlin, pub, bar, berlin, irish, english, football, sky, st. patrick's day, halloween, champions league , premiere league, sky tv, live music, rugby, big screen",
 
+    titleMenu: "Menu | The Lir",
+    descMenu:
+      "Explore our delicious menu featuring handcrafted cocktails, homemade meals, and refreshing drinks. From signature cocktails to comforting classics, we have something for everyone. Visit us today!",
+    keysMenu:
+      "irish pub berlin, pub, bar, berlin, irish, bar menu, cocktails, homemade meals, craft drinks, signature cocktails, beer, wine, whiskey, fresh ingredients, food and drinks, best bar menu",
+
     twitter: {
       card: "summary",
       image:
@@ -57,8 +63,16 @@ const helmetData = {
       "irish pub, irish bar, bar, berlin, tiergarten, beer garten, irish, pub, academy of arts, golden angle, brandenburg gate, spree, schloss bellevue, loveparade, christopher street day, fan mile, spreebogen",
 
     titleSports: "Sports | The Lir",
-    descSports: "",
-    keysSports: "",
+    descSports:
+      "The LIR, Irish Pub in Berlin Tiergarten, Sport und andere irische Feiertage",
+    keysSports:
+      "irish pub, irish pub berlin, tiergarten, pub, st. patrickâ€™s day, halloween, eurovision, wm, champions league , premier league, sky tv, sky, big screen, rugby, all nations, hurling, man united, man city, arsenal, chelsea",
+
+    titleMenu: "Menu | The Lir",
+    descMenu:
+      "Explore our delicious menu featuring handcrafted cocktails, homemade meals, and refreshing drinks. From signature cocktails to comforting classics, we have something for everyone. Visit us today!",
+    keysMenu:
+      "irish pub berlin, pub, bar, berlin, irish, bar menu, cocktails, homemade meals, craft drinks, signature cocktails, beer, wine, whiskey, fresh ingredients, food and drinks, best bar menu",
 
     twitter: {
       card: "summary",

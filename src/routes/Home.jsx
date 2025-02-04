@@ -5,11 +5,17 @@ import AnimatedPageSlider from "../components/AnimatedPageSlider";
 import AnimatedPageSliderData from "../json/AnimatedPageSliderData";
 
 import { getLanguage, useLanguage } from "../context/LanguageContext";
+import Carousel from "../components/Carousel";
 
 const Home = () => {
   const data = getLanguage(AnimatedPageSliderData);
   const meta = getLanguage(helmetData);
-
+  const slides = [
+    "https://i.ibb.co/ncrXc2V/1.png",
+    "https://i.ibb.co/B3s7v4h/2.png",
+    "https://i.ibb.co/XXR8kzF/3.png",
+    "https://i.ibb.co/yg7BSdM/4.png",
+  ];
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -39,6 +45,19 @@ const Home = () => {
         <meta name="google" content={meta.google} />
       </Helmet>
       <AnimatedPageSlider data={data} />
+      <div className="bg-primaryGreen">
+        <div className="max-w-xl justify-center items-center mx-auto  rounded-lg shadow-lg p-4">
+          {/* <Carousel
+            children={slides}
+            autoSlide={false}
+            autoSlideInterval={8000}
+          >
+            {slides.map((slide) => (
+              <img src={slide} alt="slide" className="object-cover" />
+            ))}
+          </Carousel> */}
+        </div>
+      </div>
     </>
   );
 };
