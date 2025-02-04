@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import helmetData from "@/json/helmetData";
 import AllMenuItems from "../components/AllMenuItems";
 import Pdf from "../components/Pdf";
+import { getLanguage, useLanguage } from "../context/LanguageContext";
 
 const Menu = () => {
   const [isChecked, setIsChecked] = useState(false);
