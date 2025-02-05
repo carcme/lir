@@ -59,7 +59,7 @@ const Contact = () => {
             ></iframe>
           </div>
 
-          <form name="Contact" netlify="true">
+          <form name="contact" method="POST" data-netlify="true">
             <div className="container px-5 py-24 mx-auto flex">
               <div className="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md">
                 <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">
@@ -98,8 +98,8 @@ const Contact = () => {
                   >
                     Message
                     <textarea
-                      type="text"
                       id="message"
+                      type="text"
                       name="message"
                       className="w-full bg-white rounded border border-primaryGreen focus:border-primaryGreen focus:ring-1 focus:ring-primaryGreen h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                     ></textarea>
