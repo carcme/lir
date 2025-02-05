@@ -21,10 +21,10 @@ const router = createBrowserRouter([
         path: "/menu/:slug",
         element: <SinglePost />,
       },
-      {
-        path: "/menu/:id",
-        element: <SinglePost />,
-      },
+      // {
+      //   path: "/menu/:id",
+      //   element: <SinglePost />,
+      // },
       {
         path: "/menu",
         element: <Menu />,

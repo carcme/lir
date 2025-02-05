@@ -91,13 +91,13 @@ const AnimatedPageSlider = ({ data }) => {
       </div>
       <div className="absolute z-10 w-[200px] max-w-[30%] flex gap-2.5 xs:left-[6%] left-[3%] translate-y-[-20%] top-[93%] xs:top-[90%]">
         <button
-          className="sm:w-14 sm:h-14 w-10 h-10 bg-primaryGreen font-extrabold text-white text-base  transition-colors duration-300 cursor-pointer hover:bg-white hover:text-primaryGreen font-mono"
+          className="sm:w-14 sm:h-14 w-10 h-10 rotate-180 sm:rotate-0 bg-primaryGreen font-extrabold text-white text-base  transition-colors duration-300 cursor-pointer hover:bg-white hover:text-primaryGreen font-mono"
           onClick={handlePrevious}
         >
           &lt;
         </button>
         <button
-          className="sm:w-14 sm:h-14 w-10 h-10 bg-primaryGreen font-extrabold text-white text-base  transition-colors duration-300 cursor-pointer hover:bg-white hover:text-primaryGreen font-mono"
+          className="hidden sm:block sm:w-14 sm:h-14 w-10 h-10 bg-primaryGreen font-extrabold text-white text-base  transition-colors duration-300 cursor-pointer hover:bg-white hover:text-primaryGreen font-mono"
           onClick={handleNext}
         >
           &gt;

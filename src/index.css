@@ -45,8 +45,9 @@
 .carousel {
   @apply relative h-screen w-screen overflow-hidden;
 }
+/* h-[150px] w-[150px]  */
 .carousel .list .carouselitem {
-  @apply absolute left-[70%] sm:top-[80%] top-[-15%] z-10 h-[150px] w-[150px] translate-x-[100%] rounded-[20px] bg-cover bg-center shadow-2xl transition-all duration-1000 sm:h-[180px] sm:w-[180px] sm:translate-y-[-70%] sm:translate-x-[0%];
+  @apply absolute left-[70%] sm:top-[80%] top-[100%] z-10 rounded-[20px] bg-cover bg-center shadow-2xl transition-all duration-1000 sm:h-[180px] sm:w-[180px] sm:translate-y-[-70%] sm:translate-x-[0%];
 }
 
 .carousel .list .carouselitem:nth-child(1),
@@ -54,7 +55,7 @@
   @apply left-0 top-0 h-full w-full translate-x-0 translate-y-0 rounded-none;
 }
 .carousel .list .carouselitem:nth-child(3) {
-  @apply left-[47%] xs:left-[67%];
+  @apply left-[-47%] xs:left-[67%];
 }
 .carousel .list .carouselitem:nth-child(4) {
   @apply left-[calc(47%_+_170px)] xs:left-[calc(67%_+_200px)];

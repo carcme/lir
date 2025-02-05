@@ -44,7 +44,9 @@ const Home = () => {
         <meta name="apple-mobile-web-app-capable" content={meta.apple} />
         <meta name="google" content={meta.google} />
       </Helmet>
+
       <AnimatedPageSlider data={data} />
+
       <div className="bg-primaryGreen">
         <div className="max-w-xl justify-center items-center mx-auto  rounded-lg shadow-lg p-4">
           {/* <Carousel

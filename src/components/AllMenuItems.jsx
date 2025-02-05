@@ -41,10 +41,10 @@ const AllMenuItems = () => {
   return (
     <div className="animate-txtBlur">
       <div className="">
-        <h2 className="font-bold max-w-4xl mx-auto flex flex-row sm:text-4xl text-2xl text-primaryGreen py-4 px-4 ">
+        <h2 className="font-bold max-w-4xl mx-auto flex flex-row sm:text-4xl text-2xl text-primaryGreen py-4 px-4">
           From Our Kitchen to Your Table
         </h2>
-        <p className="font-bold max-w-4xl mx-auto flex flex-row text-sm text-primaryGreen pb-4 px-4 ">
+        <p className="font-bold max-w-4xl mx-auto flex flex-row text-sm text-primaryGreen pb-4 px-4">
           Our Signature Dishes
         </p>
       </div>

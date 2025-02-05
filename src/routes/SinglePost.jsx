@@ -51,14 +51,16 @@ export default function SinglePost() {
               className="h-[400px] w-full object-cover rounded-lg"
             />
             <article className="flex flex-col justify-center">
-              <h2 className="m-0 mb-[1.38rem] text-2xl sm:text-3xl md:text-5xl font-Inconsolata font-normal leading-[1.75] capitalize tracking-wide]">
+              <h2 className="m-0 mb-[1.38rem] text-2xl sm:text-3xl font-bold leading-[1.75] capitalize  text-primaryGreen tracking-wide">
                 {entry.title}
               </h2>
 
               {entry.blockText &&
                 entry.blockText
                   .split("\n")
-                  .map((line) => <p className="pb-2">{line}</p>)}
+                  .map((line) => (
+                    <p className="pb-2 font-light tracking-wide">{line}</p>
+                  ))}
 
               {/* icons */}
               <div className="flex justify-start grid-cols-[repeat(4,1fr)] gap-4 text-center mx-0 my-8">
