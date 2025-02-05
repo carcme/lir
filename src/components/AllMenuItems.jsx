@@ -39,7 +39,7 @@ const AllMenuItems = () => {
   }, [getAllMenuItems]);
 
   return (
-    <div className="">
+    <div className="animate-txtBlur">
       <div className="">
         <h2 className="font-bold max-w-4xl mx-auto flex flex-row sm:text-4xl text-2xl text-primaryGreen py-4 px-4 ">
           From Our Kitchen to Your Table

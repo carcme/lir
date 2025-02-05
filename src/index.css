@@ -54,19 +54,19 @@
   @apply left-0 top-0 h-full w-full translate-x-0 translate-y-0 rounded-none;
 }
 .carousel .list .carouselitem:nth-child(3) {
-  @apply left-[-47%] sm:left-[67%];
+  @apply left-[47%] xs:left-[67%];
 }
 .carousel .list .carouselitem:nth-child(4) {
-  @apply left-[calc(47%_+_170px)] sm:left-[calc(67%_+_200px)];
+  @apply left-[calc(47%_+_170px)] xs:left-[calc(67%_+_200px)];
 }
 .carousel .list .carouselitem:nth-child(5) {
-  @apply left-[calc(47%_+_400px)] sm:left-[calc(67%_+_400px)];
+  @apply left-[calc(47%_+_340px)] xs:left-[calc(67%_+_400px)];
 }
 .carousel .list .carouselitem:nth-child(6) {
-  @apply left-[calc(47%_+_600px)] sm:left-[calc(67%_+_600px)];
+  @apply left-[calc(47%_+_510px)] xs:left-[calc(67%_+_600px)];
 }
 .carousel .list .carouselitem:nth-child(n + 7) {
-  @apply left-[calc(47%_+_800px)] opacity-0 sm:left-[calc(67%_+_800px)];
+  @apply left-[calc(47%_+_680px)] opacity-0 xs:left-[calc(67%_+_800px)];
 }
 .list .carouselitem .content {
   @apply absolute px-[5%] hidden pt-10 text-left h-full text-white sm:w-[60%] md:w-[50%] sm:pt-20;

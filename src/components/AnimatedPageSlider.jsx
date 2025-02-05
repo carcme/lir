@@ -1,4 +1,6 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import temp from "../assets/images/lir_outside_sports.webp";
+import cn from "@/lib/cn";
 
 const AnimatedPageSlider = ({ data }) => {
   const [currIndex, setCurrIndex] = useState(1);
@@ -23,30 +25,30 @@ const AnimatedPageSlider = ({ data }) => {
     const arrSlides = list.querySelectorAll(".carousel .list .carouselitem");
 
     if (type === "next") {
-      console.log("🚀 ~ beofer ~ listRef.current:", listRef.current);
       listRef.current.appendChild(arrSlides[0]);
-      console.log("🚀 ~ after ~ listRef.current:", listRef.current);
     } else if (type === "prev") {
       listRef.current.prepend(arrSlides[arrSlides.length - 1]);
     }
   }
 
   return (
-    <div className="carousel">
+    <div className="carousel bg-[url(${data[0].url})] bg-cover bg-center bg-no-repeat">
       <div className="list" ref={listRef}>
         {data.map((slide, i) => (
           <div
             key={i}
-            className="carouselitem border-0 border-white rounded-lg"
-            style={{
-              backgroundImage: `url(${slide.url})`,
-            }}
+            className={cn(
+              `carouselitem border-0 border-white rounded-lg ${slide.url} ${slide.urlsm} bg-cover bg-no-repeat`
+            )}
+            // style={{
+            //   backgroundImage: `url(${slide.url})`,
+            // }}
           >
             <div className="content">
               {/* <div className="hidden text-md text-primaryGreenLight lg:pt-5 pt-20 uppercase font-bold  opacity-0 animate-[blurScale_700ms_ease-in-out_300ms_1_forwards]">
                 {slide.tag}
-              </div> */}
-              <div className="lg:text-5xl text-2xl pt-20 lg:pt-8 uppercase font-bold text-white opacity-0 animate-[blurScale_700ms_ease-in-out_300ms_1_forwards]">
+                </div> */}
+              <div className="lg:text-5xl text-2xl pt-12 xs:pt-20 lg:pt-8 uppercase font-bold text-white opacity-0 animate-[blurScale_700ms_ease-in-out_300ms_1_forwards]">
                 {slide.name}
               </div>
               <div className="lg:text-md text-sm opacity-0 text-justify animate-[blurScale_700ms_ease-in-out_300ms_1_forwards] mt-2.5 mb-2">
@@ -64,7 +66,7 @@ const AnimatedPageSlider = ({ data }) => {
                 {slide.btn1Link.length > 0 && (
                   <a
                     href={slide.btn1Link}
-                    className="inline-block rounded-lg sm:bg-primaryGreen px-4 py-3 text-center text-sm font-semibold text-white ring-1 ring-white  transition duration-100 hover:bg-primaryGreenDark focus-visible:ring active:bg-accentDecoration md:text-base bg-black/50"
+                    className="hidden xxs:inline-block rounded-lg sm:bg-primaryGreen px-4 py-1 xs:py-3 text-center text-sm font-semibold text-white ring-1 ring-white  transition duration-100 hover:bg-primaryGreenDark focus-visible:ring active:bg-accentDecoration md:text-base bg-black/50"
                   >
                     {slide.btn1}
                   </a>
@@ -74,7 +76,7 @@ const AnimatedPageSlider = ({ data }) => {
                     href={slide.btn2Link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block rounded-lg sm:bg-white px-4 py-3 text-center text-sm font-semibold text-white sm:text-primaryGreen ring-1 ring-white transition duration-100 hover:bg-primaryGreen hover:text-white focus-visible:ring active:text-primaryGreen md:text-base bg-black/50"
+                    className="hidden xxs:inline-block rounded-lg sm:bg-white px-4 py-1 xs:py-3 text-center text-sm font-semibold text-white sm:text-primaryGreen ring-1 ring-white transition duration-100 hover:bg-primaryGreen hover:text-white focus-visible:ring active:text-primaryGreen md:text-base bg-black/50"
                   >
                     {slide.btn2}
                   </a>
@@ -87,15 +89,15 @@ const AnimatedPageSlider = ({ data }) => {
           </div>
         ))}
       </div>
-      <div className="absolute z-10 w-[200px] max-w-[30%] flex gap-2.5 left-[5%] translate-y-[-20%] top-[90%]">
+      <div className="absolute z-10 w-[200px] max-w-[30%] flex gap-2.5 xs:left-[6%] left-[3%] translate-y-[-20%] top-[93%] xs:top-[90%]">
         <button
-          className="w-14 h-14 bg-primaryGreen font-extrabold text-white text-base  transition-colors duration-300 cursor-pointer hover:bg-white hover:text-primaryGreen font-mono"
+          className="sm:w-14 sm:h-14 w-10 h-10 bg-primaryGreen font-extrabold text-white text-base  transition-colors duration-300 cursor-pointer hover:bg-white hover:text-primaryGreen font-mono"
           onClick={handlePrevious}
         >
           &lt;
         </button>
         <button
-          className="w-14 h-14 bg-primaryGreen font-extrabold text-white text-base  transition-colors duration-300 cursor-pointer hover:bg-white hover:text-primaryGreen font-mono"
+          className="sm:w-14 sm:h-14 w-10 h-10 bg-primaryGreen font-extrabold text-white text-base  transition-colors duration-300 cursor-pointer hover:bg-white hover:text-primaryGreen font-mono"
           onClick={handleNext}
         >
           &gt;
