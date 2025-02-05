@@ -114,7 +114,7 @@ const Contact = () => {
                 <button
                   className="text-white bg-primaryGreen border py-2 px-6 focus:outline-none hover:bg-white hover:text-primaryGreen  border-primaryGreen rounded text-lg transition-colors duration-300 ease-in-out"
                   type="submit"
-                  disabled="true"
+                  // disabled="true"
                 >
                   Send
                 </button>
