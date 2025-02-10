@@ -13,6 +13,7 @@
 
 * {
   scroll-behavior: smooth;
+  scrollbar-color: #005229 #006633;
 }
 .webkitAutoFillOverride:-webkit-autofill,
 .webkitAutoFillOverride:-webkit-autofill:hover,

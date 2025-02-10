@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { Helmet } from "react-helmet-async";
 import helmetData from "@/json/helmetData";
 import AnimatedPageSlider from "../components/hero/AnimatedPageSlider";
@@ -11,17 +11,19 @@ import LirGrid from "../components/LirGrid";
 const Home = () => {
   const data = getLanguage(AnimatedPageSliderData);
   const meta = getLanguage(helmetData);
+  const scrollTo = useRef(null);
+
   const showHeader = false;
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    scrollTo.current.scrollIntoView();
   }, []);
   return (
     <>
       <Helmet htmlAttributes={{ lang: useLanguage() }}>
         <title>{meta.titleHome}</title>
         <meta name="description" content={meta.descHome} />
-        <meta name="keywords" content={meta.keysHome} />
+        <meta name="keywords" content={meta.keysHomeuseScroll} />
         <meta name="robots" content={meta.robots} />
         <meta name="charSet" content={meta.charset} />
 
@@ -48,6 +50,7 @@ const Home = () => {
       </h1>
       {/* <AnimatedPageSlider data={data} /> */}
       <div
+        ref={scrollTo}
         className={`bg-primaryGreen pb-6 px-6 ${
           showHeader ? "pt-20" : "pt-20"
         }`}

@@ -64,9 +64,7 @@ export const Footer = () => {
                       <p className="mb-4 w-fit hover:text-white">
                         Flensburger Str. 7,
                         <br />
-                        10557,
-                        <br />
-                        Berlin
+                        10557, Berlin
                       </p>
                     </Link>
                     <p className="mb-4 w-fit text-gray-200">
