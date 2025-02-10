@@ -38,7 +38,7 @@ const Sports = () => {
         <meta name="apple-mobile-web-app-capable" content={meta.apple} />
         <meta name="google" content={meta.google} />
       </Helmet>
-      <div className="flex items-center flex-col justify-center pt-28 pb-16 w-full h-fit sm:text-3xl font-bold text-center px-4 bg-neutral-700 text-neutral-300">
+      <div className="flex items-center flex-col justify-center pt-28 pb-16 w-full h-fit sm:text-3xl font-bold text-center px-4 bg-primaryGreen text-white">
         {lang === "en" && (
           <p className="py-5 max-w-2xl text-justify">
             Live Sports Football, rugby, hurling and other sport events on big
@@ -58,7 +58,7 @@ const Sports = () => {
           target="_blank"
           className="hover:underline text-xl"
         >
-          <button className="px-4 py-3text-white bg-primaryGreen rounded-md hover:bg-primaryGreenDark">
+          <button className="px-4 py-3text-white border bg-white text-primaryGreen rounded-md hover:bg-primaryGreen hover:border-white hover:text-white">
             {lang === "en" &&
               "Visit our Facebook page for our live fixture list"}
             {lang === "de" &&

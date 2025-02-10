@@ -1,21 +1,18 @@
 import React, { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import helmetData from "@/json/helmetData";
-import AnimatedPageSlider from "../components/AnimatedPageSlider";
+import AnimatedPageSlider from "../components/hero/AnimatedPageSlider";
 import AnimatedPageSliderData from "../json/AnimatedPageSliderData";
 
 import { getLanguage, useLanguage } from "../context/LanguageContext";
 import Carousel from "../components/Carousel";
+import LirGrid from "../components/LirGrid";
 
 const Home = () => {
   const data = getLanguage(AnimatedPageSliderData);
   const meta = getLanguage(helmetData);
-  const slides = [
-    "https://i.ibb.co/ncrXc2V/1.png",
-    "https://i.ibb.co/B3s7v4h/2.png",
-    "https://i.ibb.co/XXR8kzF/3.png",
-    "https://i.ibb.co/yg7BSdM/4.png",
-  ];
+  const showHeader = false;
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -45,11 +42,18 @@ const Home = () => {
         <meta name="google" content={meta.google} />
       </Helmet>
 
-      <AnimatedPageSlider data={data} />
+      {/* <AnimatedPageSlider data={data} /> */}
+      <div
+        className={`bg-primaryGreen pb-6 px-6 ${
+          showHeader ? "pt-20" : "pt-28"
+        }`}
+      >
+        <LirGrid showHeader={showHeader} data={data} />
+      </div>
 
-      <div className="bg-primaryGreen">
-        <div className="max-w-xl justify-center items-center mx-auto  rounded-lg shadow-lg p-4">
-          {/* <Carousel
+      {/* <div className="bg-primaryGreen">
+        <div className="max-w-xl justify-center items-center mx-auto  rounded-lg shadow-lg p-4"> */}
+      {/* <Carousel
             children={slides}
             autoSlide={false}
             autoSlideInterval={8000}
@@ -58,8 +62,8 @@ const Home = () => {
               <img src={slide} alt="slide" className="object-cover" />
             ))}
           </Carousel> */}
-        </div>
-      </div>
+      {/* </div>
+      </div> */}
     </>
   );
 };

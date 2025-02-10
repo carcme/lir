@@ -1,6 +1,9 @@
+const typographyPlugin = require("./src/styles/typography");
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  plugins: [typographyPlugin],
   theme: {
     extend: {
       fontFamily: {
@@ -59,6 +62,11 @@ export default {
         relaxedSm: 'url("assets/images/small/lir_relaxed_pub_garden.webp")',
       },
       keyframes: {
+        fall: {
+          "0%": { transform: "translate(0%,-150%) skewX(0deg)" },
+          "50%": { transform: "translate(0%,0%) skewX(-30deg)" },
+          "100%": { transform: "translate(0%,150%) skewX(0deg)" },
+        },
         txtBlur: {
           from: { filter: "blur(50px) opacity(0)" },
           to: { filter: "blur(0px) opacity(1)" },
@@ -93,6 +101,7 @@ export default {
         },
       },
       animation: {
+        fall: "fall 2s ease-in-out infinite",
         txtBlur: "txtBlur 1s 0.5s backwards",
         bgBlur: "bgBlur 1s",
         fadeIn: "fadeIn 1s 0.5s backwards",
@@ -103,5 +112,4 @@ export default {
       },
     },
   },
-  plugins: [],
 };

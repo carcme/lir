@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from "react";
-import temp from "../assets/images/lir_outside_sports.webp";
 import cn from "@/lib/cn";
 
 const AnimatedPageSlider = ({ data }) => {
@@ -38,16 +37,14 @@ const AnimatedPageSlider = ({ data }) => {
           <div
             key={i}
             className={cn(
-              `carouselitem border-0 border-white rounded-lg ${slide.url} ${slide.urlsm} bg-cover bg-no-repeat`
+              `relative carouselitem border-0 border-white rounded-lg ${slide.url} ${slide.urlsm} bg-cover bg-no-repeat hover:grayscale grayscale-0 transition-colors duration-200 group`
             )}
             // style={{
             //   backgroundImage: `url(${slide.url})`,
             // }}
           >
-            <div className="content">
-              {/* <div className="hidden text-md text-primaryGreenLight lg:pt-5 pt-20 uppercase font-bold  opacity-0 animate-[blurScale_700ms_ease-in-out_300ms_1_forwards]">
-                {slide.tag}
-                </div> */}
+            <div className="absolute inset-0 group-hover:bg-[#000000]/30"></div>
+            <div className="content opacity-0 group-hover:opacity-100 transition-opacity duration-300 group-hover:grayscale-0">
               <div className="lg:text-5xl text-2xl pt-12 xs:pt-20 lg:pt-8 uppercase font-bold text-white opacity-0 animate-[blurScale_700ms_ease-in-out_300ms_1_forwards]">
                 {slide.name}
               </div>
@@ -58,7 +55,7 @@ const AnimatedPageSlider = ({ data }) => {
                   </p>
                 ))}
               </div>
-              <div className="lg:text-lg text-green-400 text-sm opacity-0 animate-[blurScale_700ms_ease-in-out_300ms_1_forwards] ml-2 mb-5">
+              <div className="lg:text-lg text-green-400 text-sm opacity-0 animate-[blurScale_700ms_ease-in-out_300ms_1_forwards] ml-2 group-hover:grayscale-0 mb-5">
                 {slide.tag}
               </div>
               {/* <div className="opacity-0 animate-[blurScale_500ms_ease-in-out_0.5s_1_forwards] ml-1 "> */}

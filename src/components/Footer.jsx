@@ -11,7 +11,7 @@ import {
 import { getLanguage, useLanguage } from "../context/LanguageContext";
 import navData from "../data/navbarLinks";
 import Pdf from "/assets/pdf/Menu.pdf";
-import DirectionsImg from "/assets/directions.webp";
+import DirectionsImg from "/assets/directions2.webp";
 
 export const Footer = () => {
   const lang = useLanguage();
@@ -120,7 +120,7 @@ export const Footer = () => {
                     <img
                       src={DirectionsImg}
                       alt="Map of directions to The Lir pub berlin"
-                      className="hover:scale-105 transition-all duration-300"
+                      className="hover:scale-105 transition-all duration-300 rounded-lg hover:shadow-xl shadow-lg"
                     />
                   </Link>
                   {/* replace hidden with flex  */}

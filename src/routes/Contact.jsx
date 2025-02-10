@@ -40,23 +40,22 @@ const Contact = () => {
       </Helmet>
       <div className="page">
         <section className="text-primaryGreen body-font relative">
-          <div className="absolute inset-0 bg-gray-200 ">
+          <div className="absolute inset-0 bg-white">
             {!mapLoaded && (
-              <h2 className="absolute text-4xl inset-0 top-[6%] md:right-[50%] lg:right-0 md:top-1/2 font-semibold justify-center text-center">
+              <h2 className="absolute text-4xl inset-0 top-[6%] md:right-[50%] lg:right-0 md:top-1/2 font-semibold text-primaryGreen justify-center text-center z-50">
                 Loading Map
               </h2>
             )}
-            <iframe
-              width="100%"
-              height="100%"
-              frameBorder="0"
-              marginHeight="0"
-              marginWidth="0"
-              title="map"
-              scrolling="no"
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9710.926251435141!2d13.3340262!3d52.5201969!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a85109d53aa221%3A0x76f0488133aba72!2sThe%20Lir!5e0!3m2!1sen!2sde!4v1738666779264!5m2!1sen!2sde"
-              onLoad={() => onMapLoaded()}
-            ></iframe>
+            <div className="iframe-wrapper bg-white">
+              <iframe
+                className="rounded-lg"
+                width="100%"
+                height="100%"
+                title="The Lir Berlin"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9710.926251435141!2d13.3340262!3d52.5201969!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a85109d53aa221%3A0x76f0488133aba72!2sThe%20Lir!5e0!3m2!1sen!2sde!4v1738666779264!5m2!1sen!2sde"
+                onLoad={() => onMapLoaded()}
+              />
+            </div>
           </div>
 
           <form
@@ -126,7 +125,6 @@ const Contact = () => {
             </div>
           </form>
         </section>
-        <div className="pb-10"></div>
       </div>
     </>
   );

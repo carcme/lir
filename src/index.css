@@ -22,6 +22,23 @@
   -webkit-text-fill-color: #fff;
 }
 
+.iframe-wrapper {
+  --border-radius: 10px;
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 6px rgb(0 0 0 / 50%);
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: inset(0% 0% 0% 0% round var(--border-radius));
+  }
+}
+
 .page {
   width: 90vw;
   max-width: 1120px;
@@ -32,6 +49,14 @@
   min-height: calc(100vh - (20rem + 2.1rem));
 }
 
+.berlin-mask {
+  -webkit-mask-image: url("/assets/berlinOutline.svg");
+  mask-image: url("/assets/berlinOutline.svg");
+  mask-repeat: no-repeat;
+  /* mask-size: 100%;
+  mask-position: center;
+  filter: brightness(80%); */
+}
 .tooltip {
   @apply invisible absolute;
 }
@@ -73,7 +98,8 @@
   @apply absolute px-[5%] hidden pt-10 text-left h-full text-white sm:w-[60%] md:w-[50%] sm:pt-20;
 }
 .list .carouselitem:nth-child(2) .content {
-  @apply block bg-gradient-to-r from-black from-20% via-black/20 via-90% to-transparent;
+  @apply block;
+  /* bg-gradient-to-r from-black from-20% via-black/20 via-90% to-transparent */
 }
 .arrows {
   @apply absolute left-[5%] top-[90%] z-10 flex w-[200px] max-w-[30%] translate-y-[-20%] gap-2.5;
