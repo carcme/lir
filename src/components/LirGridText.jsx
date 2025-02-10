@@ -4,20 +4,20 @@ const LirGridText = ({ name, tag, desc, btn1, btn2, btn1Link, btn2Link }) => {
   return (
     <div>
       <div className="md:mx4 mx-8  justify-center md:items-start items-center flex flex-col">
-        <div className="lg:text-5xl text-2xl pt-12 xs:pt-20 lg:pt-8 uppercase font-bold text-white text-center">
+        <div className="lg:text-5xl text-2xl pt-5 xs:pt-20 lg:pt-8 uppercase font-bold text-white text-center">
           {name}
         </div>
-        <div className="lg:text-md text-lg text-justify my-3 text-white">
+        <div className="lg:text-md text-sm text-justify text-white">
           {desc.map((text, i) => (
-            <p className="font-serif p-2" key={i}>
+            <p className="font-serif py-2" key={i}>
               {text}
             </p>
           ))}
         </div>
-        <div className="text-xl text-white mx-2 group-hover:grayscale-0 mt-5 mb-10">
+        <div className="text-xl text-white text-center group-hover:grayscale-0 mt-2 mb-5">
           {tag}
         </div>
-        <div className="px-2 w-full flex-col gap-2.5 sm:flex-row sm:justify-start lg:justify-start flex">
+        <div className="w-full flex-col gap-2.5 sm:flex-row sm:justify-start lg:justify-start flex">
           {btn1Link?.length > 0 && (
             <a
               href={btn1Link}
