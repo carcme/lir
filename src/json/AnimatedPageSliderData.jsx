@@ -10,7 +10,7 @@ const AnimatedPageSliderData = {
       id: 0,
       name: "Atmosphere Meets Excellence",
       tag: "Join us and experience it for yourself",
-      image: "assets/images/lir_relaxed_pub_garden.webp",
+      image: "/assets/images/lir_relaxed_pub_garden.webp",
       url: "xs:bg-relaxed",
       urlsm: "bg-relaxedSm",
       desc: [
@@ -26,7 +26,7 @@ const AnimatedPageSliderData = {
       id: 1,
       name: "Hidden in the Heart of the City",
       tag: "Experience the 'Craic' in One of Berlin's Best",
-      image: "assets/images/lir_welcome.webp",
+      image: "/assets/images/lir_welcome.webp",
       url: "xs:bg-welcome",
       urlsm: "bg-welcomeSm",
       desc: [
@@ -43,7 +43,7 @@ const AnimatedPageSliderData = {
       id: 2,
       name: "Welcome to Lir - Your Perfect Night Out",
       tag: "Visit us today and experience the magic of The Lir",
-      image: "assets/images/lir_bar_warm_glow.webp",
+      image: "/assets/images/lir_bar_warm_glow.webp",
       url: "xs:bg-warmGlow",
       urlsm: "bg-warmGlowSm",
       desc: [
@@ -60,7 +60,7 @@ const AnimatedPageSliderData = {
       id: 3,
       name: "Experience the Magic of Lir",
       tag: "Join us today and let the good times flow!",
-      image: "assets/images/lir_outside_warm.webp",
+      image: "/assets/images/lir_outside_warm.webp",
       url: "xs:bg-warmOutside",
       urlsm: "bg-warmOutsideSm",
 
@@ -77,7 +77,7 @@ const AnimatedPageSliderData = {
       id: 4,
       name: "Game On at The Lir",
       tag: "Don't just watch the game - feel the energy.",
-      image: "assets/images/lir_outside_sports.webp",
+      image: "/assets/images/lir_outside_sports.webp",
       url: "xs:bg-sportsOutside",
       urlsm: "bg-sportsOutsideSm",
       desc: [
@@ -92,7 +92,7 @@ const AnimatedPageSliderData = {
     // {
     //   id: 5,
     //   name: "John Doe",
-    //   url: "/assets/images/Lir6.webp",
+    //   url: "//assets/images/Lir6.webp",
     //   desc: [
     //     "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium totam cumque, voluptatibus quisquam dolores enim doloribus recusandae voluptas distinctio nemo!",
     //   ],
@@ -104,7 +104,7 @@ const AnimatedPageSliderData = {
     // {
     //   id: 6,
     //   name: "Pete & Patel",
-    //   url: "/assets/images/Lir7.webp",
+    //   url: "//assets/images/Lir7.webp",
 
     //   desc: [
     //     "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium totam cumque, voluptatibus quisquam dolores enim doloribus recusandae voluptas distinctio nemo!",
@@ -120,7 +120,7 @@ const AnimatedPageSliderData = {
       id: 0,
       name: "Atmosphäre trifft auf Exzellenz",
       tag: "Kommen Sie zu uns und erleben Sie es selbst",
-      image: "assets/images/lir_relaxed_pub_garden.webp",
+      image: "/assets/images/lir_relaxed_pub_garden.webp",
       url: "xs:bg-relaxed",
       urlsm: "bg-relaxedSm",
       desc: [
@@ -136,7 +136,7 @@ const AnimatedPageSliderData = {
       id: 1,
       name: "Versteckt im Herz der Stadt",
       tag: "Erleben Sie den „Craic“ in einer der besten Adressen Berlins",
-      image: "assets/images/lir_welcome.webp",
+      image: "/assets/images/lir_welcome.webp",
       url: "xs:bg-welcome",
       urlsm: "bg-welcomeSm",
       desc: [
@@ -153,7 +153,7 @@ const AnimatedPageSliderData = {
       id: 2,
       name: "Willkommen im Lir - Ihr perfekter Abend",
       tag: "Besuchen Sie uns heute und erleben Sie den Zauber des Lir",
-      image: "assets/images/lir_bar_warm_glow.webp",
+      image: "/assets/images/lir_bar_warm_glow.webp",
       url: "xs:bg-warmGlow",
       urlsm: "bg-warmGlowSm",
       desc: [
@@ -169,7 +169,7 @@ const AnimatedPageSliderData = {
       id: 3,
       name: "Erlebe die Magie von Lir",
       tag: "Kommen Sie noch heute zu uns und lassen Sie die gute Zeit beginnen!",
-      image: "assets/images/lir_outside_warm.webp",
+      image: "/assets/images/lir_outside_warm.webp",
       url: "xs:bg-warmOutside",
       urlsm: "bg-warmOutsideSm",
       desc: [
@@ -185,7 +185,7 @@ const AnimatedPageSliderData = {
       id: 4,
       name: "Game On at The Lir",
       tag: "Sieh dir das Spiel nicht nur an - spüre die Energie.",
-      image: "assets/images/lir_outside_sports.webp",
+      image: "/assets/images/lir_outside_sports.webp",
       url: "xs:bg-sportsOutside",
       urlsm: "bg-sportsOutsideSm",
       desc: [

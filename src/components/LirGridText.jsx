@@ -14,7 +14,7 @@ const LirGridText = ({ name, tag, desc, btn1, btn2, btn1Link, btn2Link }) => {
             </p>
           ))}
         </div>
-        <div className="text-lg text-gray-200 mx-2 group-hover:grayscale-0 mb-5">
+        <div className="text-xl text-white mx-2 group-hover:grayscale-0 mt-5 mb-10">
           {tag}
         </div>
         <div className="px-2 w-full flex-col gap-2.5 sm:flex-row sm:justify-start lg:justify-start flex">
