@@ -42,10 +42,14 @@ const Home = () => {
         <meta name="google" content={meta.google} />
       </Helmet>
 
+      {/* this is hidden by the text color and4 the navbar */}
+      <h1 className="text-primaryGreen">
+        The Lir Berlin - Great Drinks, Live Sports & Warm Hospitality
+      </h1>
       {/* <AnimatedPageSlider data={data} /> */}
       <div
         className={`bg-primaryGreen pb-6 px-6 ${
-          showHeader ? "pt-20" : "pt-28"
+          showHeader ? "pt-20" : "pt-20"
         }`}
       >
         <LirGrid showHeader={showHeader} data={data} />

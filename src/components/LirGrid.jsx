@@ -23,7 +23,7 @@ const LirGrid = ({ showHeader = false, data }) => {
   return (
     <div className="">
       {showHeader && (
-        <header className="p-4 font-bold text-lg text-primaryGreen">
+        <header className="pb-4 font-bold text-lg text-white">
           Click image to read more
         </header>
       )}

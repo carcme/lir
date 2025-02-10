@@ -40,7 +40,7 @@ export default function SinglePost() {
 
   return (
     <>
-      <main className="pt-32 pb-16 page">
+      <main className="page pb-5">
         <div className="recipe-page animate-txtBlur">
           {/* hero */}
           <section className="grid sm:grid-flow-col gap-12">
