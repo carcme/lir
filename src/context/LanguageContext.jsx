@@ -18,14 +18,19 @@ export function useLanguageChange() {
 
 export function LanguageProvider({ children }) {
   const [language, setLanguage] = useState("en");
+  const [showWelcome, setShowWelcome] = useState(true);
 
-  function changeLanguage(lang) {
+  function changeLanguage() {
     setLanguage(language === "en" ? "de" : "en");
+  }
+
+  function shownWelcome() {
+    setShowWelcome(false);
   }
 
   return (
     <LanguageContext.Provider value={language}>
-      <LanguageChangeContext.Provider value={changeLanguage}>
+      <LanguageChangeContext.Provider value={(changeLanguage, shownWelcome)}>
         {children}
       </LanguageChangeContext.Provider>
     </LanguageContext.Provider>

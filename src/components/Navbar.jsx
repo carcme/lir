@@ -36,7 +36,7 @@ const Navbar = () => {
     >
       {/* Logo */}
       <Link to="/" className="pl-4 sm:pl-12 z-50">
-        <img src={Logo} alt="The Lir Berlin Logo" className="h-16 w-16 " />
+        <img src={Logo} alt="The Lir Berlin Logo" className="h-16 w-16" />
       </Link>
       {/* Desktop Navigation */}
       <button
@@ -50,11 +50,11 @@ const Navbar = () => {
           }`}
         ></span>
       </button>
-      <ul className="hidden hover-diagonal-line md:flex text-white">
+      <ul className="hidden md:flex text-white">
         {navbarLinks.map((item, index) => (
           <li
             key={index}
-            className="p-4 m-2 duration-300 cursor-pointer capitalize "
+            className="p-4 m-2 duration-300 cursor-pointer capitalize"
           >
             <NavLink
               to={item.path}

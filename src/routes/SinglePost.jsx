@@ -118,7 +118,7 @@ export default function SinglePost() {
         </div>
         <div className="w-full flex h-fit justify-end">
           <Link to="/menu">
-            <button className="px-4 py-2 rounded-md mt-5  bg-primaryGreen border font-extrabold text-white text-base  transition-colors duration-300 cursor-pointer hover:bg-white hover:border-primaryGreen hover:text-primaryGreen font-mono">
+            <button className="px-4 py-2 rounded-md mt-5  bg-primaryGreen border font-extrabold text-white text-base  transition-colors duration-300 cursor-pointer hover:bg-white hover:border-primaryGreen hover:text-primaryGreen">
               Back
             </button>
           </Link>

@@ -4,18 +4,21 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { LanguageProvider } from "./context/LanguageContext";
 import { HelmetProvider } from "react-helmet-async";
+import GlobalContextProvider from "./context/GlobalContextProvider";
 
 function App() {
   console.log("App");
   return (
     <>
-      <LanguageProvider>
-        <HelmetProvider>
-          <Navbar />
-          <Outlet />
-          <Footer />
-        </HelmetProvider>
-      </LanguageProvider>
+      <GlobalContextProvider>
+        <LanguageProvider>
+          <HelmetProvider>
+            <Navbar />
+            <Outlet />
+            <Footer />
+          </HelmetProvider>
+        </LanguageProvider>
+      </GlobalContextProvider>
     </>
   );
 }

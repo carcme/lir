@@ -50,7 +50,7 @@ const AnimatedPageSlider = ({ data }) => {
               </div>
               <div className="lg:text-md text-sm opacity-0 text-justify animate-[blurScale_700ms_ease-in-out_300ms_1_forwards] mt-2.5 mb-2">
                 {slide.desc.map((desc, i) => (
-                  <p className="font-serif p-2" key={i}>
+                  <p className="p-2" key={i}>
                     {desc}
                   </p>
                 ))}
@@ -88,13 +88,13 @@ const AnimatedPageSlider = ({ data }) => {
       </div>
       <div className="absolute z-10 w-[200px] max-w-[30%] flex gap-2.5 xs:left-[6%] left-[3%] translate-y-[-20%] top-[93%] xs:top-[90%]">
         <button
-          className="sm:w-14 sm:h-14 w-10 h-10 rotate-180 sm:rotate-0 bg-primaryGreen font-extrabold text-white text-base  transition-colors duration-300 cursor-pointer hover:bg-white hover:text-primaryGreen font-mono"
+          className="sm:w-14 sm:h-14 w-10 h-10 rotate-180 sm:rotate-0 bg-primaryGreen font-extrabold text-white text-base  transition-colors duration-300 cursor-pointer hover:bg-white hover:text-primaryGreen"
           onClick={handlePrevious}
         >
           &lt;
         </button>
         <button
-          className="hidden sm:block sm:w-14 sm:h-14 w-10 h-10 bg-primaryGreen font-extrabold text-white text-base  transition-colors duration-300 cursor-pointer hover:bg-white hover:text-primaryGreen font-mono"
+          className="hidden sm:block sm:w-14 sm:h-14 w-10 h-10 bg-primaryGreen font-extrabold text-white text-base  transition-colors duration-300 cursor-pointer hover:bg-white hover:text-primaryGreen"
           onClick={handleNext}
         >
           &gt;

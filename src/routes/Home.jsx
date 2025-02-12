@@ -1,23 +1,43 @@
-import React, { useEffect, useRef } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import helmetData from "@/json/helmetData";
 import AnimatedPageSlider from "../components/hero/AnimatedPageSlider";
 import AnimatedPageSliderData from "../json/AnimatedPageSliderData";
 
+import {
+  GlobalDispatchContext,
+  GlobalStateContext,
+} from "../context/GlobalContextProvider";
+
 import { getLanguage, useLanguage } from "../context/LanguageContext";
 import Carousel from "../components/Carousel";
 import LirGrid from "../components/LirGrid";
+import HeroTextSlideIn from "../components/gsap/HeroTextSlideIn";
 
 const Home = () => {
   const data = getLanguage(AnimatedPageSliderData);
   const meta = getLanguage(helmetData);
   const scrollTo = useRef(null);
 
+  const globalDispatch = useContext(GlobalDispatchContext);
+  const globalState = useContext(GlobalStateContext);
+
   const showHeader = false;
 
+  const welcomeFinished = () => {
+    scrollTo.current.scrollIntoView({
+      behavior: "smooth",
+    });
+    setTimeout(() => {
+      globalDispatch({ type: "TOGGLE_WELCOME" });
+    }, 1000);
+  };
+
   useEffect(() => {
-    scrollTo.current.scrollIntoView();
-  }, []);
+    if (globalState.welcome) {
+      window.scrollTo(0, 0);
+    }
+  }, [globalState.welcome]);
   return (
     <>
       <Helmet htmlAttributes={{ lang: useLanguage() }}>
@@ -44,8 +64,10 @@ const Home = () => {
         <meta name="google" content={meta.google} />
       </Helmet>
 
+      {globalState.welcome && <HeroTextSlideIn endAction={welcomeFinished} />}
+
       {/* this is hidden by the text color and4 the navbar */}
-      <h1 className="text-primaryGreen">
+      <h1 className="text-primaryGreen bg-primaryGreen">
         The Lir Berlin - Great Drinks, Live Sports & Warm Hospitality
       </h1>
       {/* <AnimatedPageSlider data={data} /> */}
@@ -57,7 +79,6 @@ const Home = () => {
       >
         <LirGrid showHeader={showHeader} data={data} />
       </div>
-
       {/* <div className="bg-primaryGreen">
         <div className="max-w-xl justify-center items-center mx-auto  rounded-lg shadow-lg p-4"> */}
       {/* <Carousel

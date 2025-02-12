@@ -17,11 +17,11 @@ const LirDrawer = ({ isOpen, setIsOpen, data }) => {
           onClick={() => {
             setIsOpen(false);
           }}
-          className={`absolute md:w-1/2 xl:w-2/5 bottom-0 bg-primaryGreen top-20 right-0 h-screen max-h-fit shadow-xl duration-500 ease-in-out transition-all transform  ${
+          className={`absolute md:w-2/3 xl:w-3/5 bottom-0 bg-primaryGreen top-20 right-0 h-screen max-h-fit shadow-xl duration-500 ease-in-out rounded-bl-full transition-all transform  ${
             isOpen ? " translate-x-0 " : " translate-x-full "
           } `}
         >
-          <article className="relative w-full max-w-lg pb-10 flex flex-col space-y-6 h-full">
+          <article className="relative flex flex-col h-fit">
             <LirGridText
               name={name}
               tag={tag}
