@@ -102,7 +102,7 @@ export default {
       },
       animation: {
         fall: "fall 2s ease-in-out infinite",
-        txtBlur: "txtBlur 1s 0.5s backwards",
+        txtBlur: "txtBlur 0.8s 0.1s backwards",
         bgBlur: "bgBlur 1s",
         fadeIn: "fadeIn 1s 0.5s backwards",
         flash: "flash 0.5s ",

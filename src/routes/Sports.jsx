@@ -1,13 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import helmetData from "@/json/helmetData";
-import { useLanguage, getLanguage } from "../context/LanguageContext";
 import { Link } from "react-router-dom";
 import SportsSchedule from "../components/SportsSchedule";
 
+import {
+  GlobalStateContext,
+  getLanguage,
+} from "../context/GlobalContextProvider";
+
 const Sports = () => {
-  const lang = useLanguage();
-  const meta = getLanguage(helmetData);
+  const globalState = useContext(GlobalStateContext);
+  const meta = getLanguage(globalState.lang, helmetData);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -15,7 +19,7 @@ const Sports = () => {
 
   return (
     <>
-      <Helmet htmlAttributes={{ lang: useLanguage() }}>
+      <Helmet htmlAttributes={{ lang: globalState.lang }}>
         <title>{meta.titleSports}</title>
         <meta name="description" content={meta.descSports} />
         <meta name="keywords" content={meta.keysSports} />
@@ -38,15 +42,15 @@ const Sports = () => {
         <meta name="apple-mobile-web-app-capable" content={meta.apple} />
         <meta name="google" content={meta.google} />
       </Helmet>
-      <div className="flex items-center flex-col justify-center pt-28 pb-16 w-full h-fit sm:text-3xl font-bold text-center px-4 bg-primaryGreen text-white">
-        {lang === "en" && (
+      <div className="flex flex-col justify-center items-center px-4 pt-28 pb-16 w-full font-bold text-center text-white h-fit sm:text-3xl bg-primaryGreen">
+        {globalState.lang === "en" && (
           <p className="py-5 max-w-2xl text-justify">
             Live Sports Football, rugby, hurling and other sport events on big
             screen in HD. World Cup, Premier League, Champions & Euro League,
             Bundesliga Highlights, Six Nations
           </p>
         )}
-        {lang === "de" && (
+        {globalState.lang === "de" && (
           <p className="py-5 max-w-2xl text-justify">
             Fußball, Rugby, Hurling und andere Sport Events auf Großbildleinwand
             in HD. World Cup, Premier League, Champions & Euro League,
@@ -56,12 +60,12 @@ const Sports = () => {
         <Link
           to="https://www.facebook.com/irishpubberlin/"
           target="_blank"
-          className="hover:underline text-xl"
+          className="text-xl hover:underline"
         >
-          <button className="px-4 py-3text-white border bg-white text-primaryGreen rounded-md hover:bg-primaryGreen hover:border-white hover:text-white">
-            {lang === "en" &&
+          <button className="px-4 bg-white rounded-md border py-3text-white text-primaryGreen hover:bg-primaryGreen hover:border-white hover:text-white">
+            {globalState.lang === "en" &&
               "Visit our Facebook page for our live fixture list"}
-            {lang === "de" &&
+            {globalState.lang === "de" &&
               "Bitte besuchen Sie unsere Facebook-Seite für unsere Live Übertragungsliste"}
           </button>
         </Link>

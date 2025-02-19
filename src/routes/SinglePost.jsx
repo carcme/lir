@@ -1,52 +1,32 @@
-import { useCallback, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { FaEuroSign } from "react-icons/fa";
-import client from "../client";
+import { useLirMenuStore } from "../store";
 
 export default function SinglePost() {
+  const allMenus = useLirMenuStore.getState().menu;
   const { slug } = useParams();
-  const [entry, setEntry] = useState([]);
-
-  const sanitise = useCallback((rawData) => {
-    const items = rawData.map((data) => {
-      const { title, desc, featured, slug, price, blockText } = data.fields;
-      console.log("🚀 ~ items ~ blockText:", blockText);
-      const id = data.sys.id;
-      const image = data.fields.image.fields.file.url;
-
-      return { id, title, desc, image, featured, slug, price, blockText };
-    });
-    setEntry(items[0]);
-  }, []);
-
-  const getEntry = useCallback(async () => {
-    try {
-      const resp = await client.getEntries({
-        content_type: "lirMenuItem",
-        // "sys.id": `${id}`,
-        "fields.slug": `${slug}`,
-      });
-      const rawData = resp.items;
-      console.log("🚀 ~ getEntry ~ rawData:", rawData);
-      if (resp.items.length > 0) sanitise(resp.items);
-      else setEntry([]);
-    } catch (error) {}
-  }, []);
+  const [entry, setEntry] = useState(
+    allMenus.filter((item) => item.slug === slug)[0]
+  );
 
   useEffect(() => {
-    getEntry();
     window.scrollTo(0, 0);
   }, [slug]);
 
   return (
     <>
-      <main className="page pb-5">
+      <main className="pb-5 page">
         <div className="recipe-page animate-txtBlur">
           {/* hero */}
-          <section className="grid sm:grid-flow-col gap-12">
+          <section className="grid gap-12 sm:grid-flow-col">
             <img
-              src={entry.image}
-              alt={entry.title}
+              src={entry.image.url}
+              alt={
+                entry.image.description === null
+                  ? entry.desc
+                  : entry.image.description
+              }
               title={entry.title}
               className="h-[400px] w-full object-cover rounded-lg"
             />
@@ -56,18 +36,18 @@ export default function SinglePost() {
               </h2>
 
               {entry.blockText &&
-                entry.blockText
-                  .split("\n")
-                  .map((line) => (
-                    <p className="pb-2 font-light tracking-wide">{line}</p>
-                  ))}
+                entry.blockText.split("\n").map((line, index) => (
+                  <p key={index} className="pb-2 font-light tracking-wide">
+                    {line}
+                  </p>
+                ))}
 
               {/* icons */}
               <div className="flex justify-start grid-cols-[repeat(4,1fr)] gap-4 text-center mx-0 my-8">
                 {entry.price?.length > 0 && (
-                  <article className="flex mx-4 items-center">
+                  <article className="flex items-center mx-4">
                     <FaEuroSign size={16} />
-                    <h5 className="mb-0 mx-2 text-primaryGreen font-semibold size-6">
+                    <h5 className="mx-2 mb-0 font-semibold text-primaryGreen size-6">
                       {entry.price}
                     </h5>
                   </article>
@@ -116,9 +96,9 @@ export default function SinglePost() {
             </article> */}
           </section>
         </div>
-        <div className="w-full flex h-fit justify-end">
+        <div className="flex justify-end w-full h-fit">
           <Link to="/menu">
-            <button className="px-4 py-2 rounded-md mt-5  bg-primaryGreen border font-extrabold text-white text-base  transition-colors duration-300 cursor-pointer hover:bg-white hover:border-primaryGreen hover:text-primaryGreen">
+            <button className="px-4 py-2 mt-5 text-base font-extrabold text-white rounded-md border transition-colors duration-300 cursor-pointer bg-primaryGreen hover:bg-white hover:border-primaryGreen hover:text-primaryGreen">
               Back
             </button>
           </Link>

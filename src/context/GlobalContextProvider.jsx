@@ -8,6 +8,14 @@ const initialState = {
   welcome: true,
 };
 
+export function getLanguage(lang, script) {
+  if (lang === "en") {
+    return script.en;
+  } else {
+    return script.de;
+  }
+}
+
 function reducer(state, action) {
   switch (action.type) {
     case "TOGGLE_LANG": {

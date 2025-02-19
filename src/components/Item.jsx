@@ -7,11 +7,11 @@ const Item = ({ id, img, title, desc, slug }) => {
       <Link to={slug} title={title} image={img} body={desc}>
         <div className="">
           <img
-            src={img}
+            src={img.url}
             alt={title}
-            className="object-cover h-32 w-screen sm:w-72 rounded-lg"
+            className="object-cover w-screen h-32 rounded-lg sm:w-72"
           />
-          <h2 className="mb-0 mt-1 text-primaryGreen font-bold">{title}</h2>
+          <h2 className="mt-1 mb-0 font-bold text-primaryGreen">{title}</h2>
           <p className="text-sm font-light text-primaryGreen">{desc}</p>
         </div>
       </Link>

@@ -1,15 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import LirDrawer from "./LirDrawer";
 import LirGridText from "./LirGridText";
-import { getLanguage, useLanguage } from "../context/LanguageContext";
+
+import {
+  GlobalDispatchContext,
+  GlobalStateContext,
+  getLanguage,
+} from "../context/GlobalContextProvider";
 
 const LirGrid = ({ showHeader = false, data }) => {
+  const globalState = useContext(GlobalStateContext);
+
   const [dataItems, setDataItems] = useState(data);
   const [itemIndex, setItemIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
-
-  const lang = useLanguage();
 
   const isClicked = (id) => {
     setItemIndex(id);
@@ -18,26 +23,26 @@ const LirGrid = ({ showHeader = false, data }) => {
 
   useEffect(() => {
     setDataItems(data);
-  }, [lang]);
+  }, [globalState.lang]);
 
   return (
     <div className="">
       {showHeader && (
-        <header className="pb-4 font-bold text-lg text-white">
+        <header className="pb-4 text-lg font-bold text-white">
           Click image to read more
         </header>
       )}
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
         {data.map((item, i) => {
           return (
             <div
               key={i}
               className="relative duration-700"
-              // className="relative group transition-opacity duration-700 after:absolute after:inset-0 hover:after:bg-primaryGreenLight after:duration-700 after:mix-blend-soft-light after:rounded-lg"
+              // className="relative transition-opacity duration-700 group after:absolute after:inset-0 hover:after:bg-primaryGreenLight after:duration-700 after:mix-blend-soft-light after:rounded-lg"
             >
               <img
-                className="w-full h-full rounded-md object-cover md:hover:scale-105 transition-all duration-500 hover:shadow-xl  shadow-lg"
+                className="object-cover w-full h-full rounded-md shadow-lg transition-all duration-500 md:hover:scale-105 hover:shadow-xl"
                 src={item.image}
                 alt={item.title}
                 onClick={() => isClicked(i)}

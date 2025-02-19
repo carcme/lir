@@ -1,23 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Outlet } from "react-router-dom";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import { LanguageProvider } from "./context/LanguageContext";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 import { HelmetProvider } from "react-helmet-async";
 import GlobalContextProvider from "./context/GlobalContextProvider";
+import { useLirMenuStore } from "./store";
+import { getMenus } from "./lib/contentful";
 
 function App() {
   console.log("App");
+
+  useEffect(() => {
+    getMenus();
+  }, []);
   return (
     <>
       <GlobalContextProvider>
-        <LanguageProvider>
-          <HelmetProvider>
-            <Navbar />
-            <Outlet />
-            <Footer />
-          </HelmetProvider>
-        </LanguageProvider>
+        <HelmetProvider>
+          <Navbar />
+          <Outlet />
+          <Footer />
+        </HelmetProvider>
       </GlobalContextProvider>
     </>
   );

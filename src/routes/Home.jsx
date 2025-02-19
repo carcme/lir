@@ -7,20 +7,19 @@ import AnimatedPageSliderData from "../json/AnimatedPageSliderData";
 import {
   GlobalDispatchContext,
   GlobalStateContext,
+  getLanguage,
 } from "../context/GlobalContextProvider";
 
-import { getLanguage, useLanguage } from "../context/LanguageContext";
-import Carousel from "../components/Carousel";
 import LirGrid from "../components/LirGrid";
 import HeroTextSlideIn from "../components/gsap/HeroTextSlideIn";
 
 const Home = () => {
-  const data = getLanguage(AnimatedPageSliderData);
-  const meta = getLanguage(helmetData);
-  const scrollTo = useRef(null);
-
   const globalDispatch = useContext(GlobalDispatchContext);
   const globalState = useContext(GlobalStateContext);
+  const data = getLanguage(globalState.lang, AnimatedPageSliderData);
+  console.log("🚀 ~ Home ~ data:", data);
+  const meta = getLanguage(globalState.lang, helmetData);
+  const scrollTo = useRef(null);
 
   const showHeader = false;
 
@@ -40,7 +39,7 @@ const Home = () => {
   }, [globalState.welcome]);
   return (
     <>
-      <Helmet htmlAttributes={{ lang: useLanguage() }}>
+      <Helmet htmlAttributes={{ lang: globalState.lang }}>
         <title>{meta.titleHome}</title>
         <meta name="description" content={meta.descHome} />
         <meta name="keywords" content={meta.keysHomeuseScroll} />
@@ -80,7 +79,7 @@ const Home = () => {
         <LirGrid showHeader={showHeader} data={data} />
       </div>
       {/* <div className="bg-primaryGreen">
-        <div className="max-w-xl justify-center items-center mx-auto  rounded-lg shadow-lg p-4"> */}
+        <div className="justify-center items-center p-4 mx-auto max-w-xl rounded-lg shadow-lg"> */}
       {/* <Carousel
             children={slides}
             autoSlide={false}

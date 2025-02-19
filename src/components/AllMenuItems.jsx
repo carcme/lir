@@ -1,70 +1,46 @@
 import React, { useCallback, useEffect, useState } from "react";
 import client from "../client";
 import ItemGrid from "./ItemGrid";
+import { useLirMenuStore } from "../store";
 
 const AllMenuItems = () => {
   const [foodItems, setFoodItems] = useState([]);
   const [drinksItems, setDrinksItems] = useState([]);
 
-  const sanitise = useCallback((rawData) => {
-    const items = rawData.map((data) => {
-      const { title, desc, featured, slug, block, tags } = data.fields;
-      const id = data.sys.id;
-      const img = data.fields.image.fields.file.url;
-
-      return { id, title, desc, img, featured, slug, block, tags };
-    });
-
-    setFoodItems(items.filter((item) => item.tags[0] === "food"));
-    setDrinksItems(items.filter((item) => item.tags[0] === "drink"));
-  }, []);
-
-  const getAllMenuItems = useCallback(async () => {
-    try {
-      const resp = await client.getEntries({
-        content_type: "lirMenuItem",
-      });
-      if (resp.items) sanitise(resp.items);
-      else {
-        setFoodItems([]);
-        setDrinksItems([]);
-      }
-    } catch (error) {
-      console.log("🚀 ~ getAllMenuItems ~ error:", error);
-    }
-  }, [sanitise]);
+  const [menus, setMenus] = useState(useLirMenuStore.getState().menu);
 
   useEffect(() => {
-    getAllMenuItems();
-  }, [getAllMenuItems]);
+    setFoodItems(menus.filter((item) => item.tags[0] === "food"));
+    setDrinksItems(menus.filter((item) => item.tags[0] === "drink"));
+  }, [menus]);
 
   return (
     <div className="animate-txtBlur">
       <div className="">
-        <h2 className="font-bold max-w-4xl mx-auto flex flex-row sm:text-4xl text-2xl text-primaryGreen py-4 px-4">
+        <h2 className="flex flex-row px-4 py-4 mx-auto max-w-4xl text-2xl font-bold sm:text-4xl text-primaryGreen">
           From Our Kitchen to Your Table
         </h2>
-        <p className="font-bold max-w-4xl mx-auto flex flex-row text-sm text-primaryGreen pb-4 px-4">
+        <p className="flex flex-row px-4 pb-4 mx-auto max-w-4xl text-sm font-bold text-primaryGreen">
           Our Signature Dishes
         </p>
       </div>
 
       <ItemGrid itemList={foodItems} className="py-20" />
 
-      <hr className="h-px mt-10 sm:mx-32 mx-10 bg-primaryGreen/20 border-0 " />
+      <hr className="mx-10 mt-10 h-px border-0 sm:mx-32 bg-primaryGreen/20" />
 
       <div className="pt-10">
-        <h2 className="font-bold max-w-4xl mx-auto flex flex-row sm:text-4xl text-2xl text-primaryGreen py-1 px-4">
+        <h2 className="flex flex-row px-4 py-1 mx-auto max-w-4xl text-2xl font-bold sm:text-4xl text-primaryGreen">
           Bespoke Beverages
         </h2>
-        <p className="font-bold max-w-4xl mx-auto flex flex-row text-sm text-primaryGreen pb-4 px-4 ">
+        <p className="flex flex-row px-4 pb-4 mx-auto max-w-4xl text-sm font-bold text-primaryGreen">
           Designed by Us, Drank by You
         </p>
       </div>
 
       <ItemGrid itemList={drinksItems} />
 
-      <hr className="h-px mt-10 sm:mx-32 mx-10 bg-primaryGreen/20 border-0 " />
+      <hr className="mx-10 mt-10 h-px border-0 sm:mx-32 bg-primaryGreen/20" />
     </div>
   );
 };

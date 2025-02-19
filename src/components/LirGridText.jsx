@@ -3,30 +3,30 @@ import cn from "@/lib/cn";
 
 const LirGridText = ({ name, tag, desc, btn1, btn2, btn1Link, btn2Link }) => {
   return (
-    <div>
-      <div className="md:mx8 mx-4 justify-center md:items-end items-center flex flex-col">
-        <div className="lg:text-5xl lg:pb-10 w-full text-2xl pt-1 xs:pt-5 uppercase font-bold text-white lg:text-left text-center lg:pl-9">
+    <>
+      <div className="flex flex-col justify-center items-center mx-4 md:mx8 md:items-end">
+        <div className="pt-1 w-full text-2xl font-bold text-center text-white uppercase lg:text-5xl lg:pb-10 xs:pt-5 lg:text-left lg:pl-9">
           {name}
         </div>
-        <div className="lg:text-md text-sm text-justify text-white">
+        <div className="text-sm text-justify text-white lg:text-md">
           {desc.map((text, i) => (
             <p
-              className="py-2 leading-5 testclass"
-              style={{ marginLeft: (i + 1) * 38 + "px" }}
+              className="py-2 leading-5 sm:pl-16 testclass"
+              // style={{ marginLeft: (i + 1) * 38 + "px" }}
               key={i}
             >
               {text}
             </p>
           ))}
         </div>
-        <div className="text-xl text-white text-center justify-end mt-2 mb-5">
+        <div className="justify-end mt-2 mb-5 text-xl text-center text-white">
           {tag}
         </div>
         <div className="w-full flex-col gap-2.5 sm:flex-row sm:justify-end lg:justify-end flex pb-8">
           {btn1Link?.length > 0 && (
             <a
               href={btn1Link}
-              className="inline-block rounded-lg mx-1 bg-primaryGreen px-4 py-2 xs:py-3 text-center text-sm font-semibold text-white ring-1 ring-white  transition duration-100 hover:bg-primaryGreenDark focus-visible:ring active:bg-accentDecoration md:text-base"
+              className="inline-block px-4 py-2 mx-1 text-sm font-semibold text-center text-white rounded-lg ring-1 ring-white transition duration-100 bg-primaryGreen xs:py-3 hover:bg-primaryGreenDark focus-visible:ring active:bg-accentDecoration md:text-base"
             >
               {btn1}
             </a>
@@ -36,7 +36,7 @@ const LirGridText = ({ name, tag, desc, btn1, btn2, btn1Link, btn2Link }) => {
               href={btn2Link}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block rounded-lg mx-1 bg-white px-4 py-2 xs:py-3 text-center text-sm font-semibold text-primaryGreen ring-1 ring-white transition duration-100 hover:bg-primaryGreen hover:text-white focus-visible:ring active:text-primaryGreen md:text-base bg-black/50"
+              className="inline-block px-4 py-2 mx-1 text-sm font-semibold text-center bg-white rounded-lg ring-1 ring-white transition duration-100 xs:py-3 text-primaryGreen hover:bg-primaryGreen hover:text-white focus-visible:ring active:text-primaryGreen md:text-base bg-black/50"
             >
               {btn2}
             </a>
@@ -46,7 +46,7 @@ const LirGridText = ({ name, tag, desc, btn1, btn2, btn1Link, btn2Link }) => {
           )}
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

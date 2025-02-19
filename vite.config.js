@@ -1,6 +1,7 @@
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 import path, { resolve } from "path";
+import { imagetools } from "vite-imagetools";
 
 const root = resolve(__dirname, "src");
 const outDir = resolve(__dirname, "dist");
@@ -8,7 +9,7 @@ const outDir = resolve(__dirname, "dist");
 // https://vitejs.dev/config/
 export default defineConfig({
   root,
-  plugins: [react()],
+  plugins: [react(), imagetools()],
   base: "",
   resolve: {
     alias: {

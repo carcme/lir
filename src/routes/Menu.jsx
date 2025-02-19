@@ -1,13 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import helmetData from "@/json/helmetData";
 import AllMenuItems from "../components/AllMenuItems";
 import Pdf from "../components/Pdf";
-import { getLanguage, useLanguage } from "../context/LanguageContext";
+
+import {
+  GlobalStateContext,
+  getLanguage,
+} from "../context/GlobalContextProvider";
 
 const Menu = () => {
   const [isChecked, setIsChecked] = useState(false);
-  const meta = getLanguage(helmetData);
+  const globalState = useContext(GlobalStateContext);
+  const meta = getLanguage(globalState.lang, helmetData);
 
   const handleCheckboxChange = () => {
     setIsChecked(!isChecked);
@@ -17,7 +22,7 @@ const Menu = () => {
   }, []);
   return (
     <>
-      <Helmet htmlAttributes={{ lang: useLanguage() }}>
+      <Helmet htmlAttributes={{ lang: globalState.lang }}>
         <title>{meta.titleMenu}</title>
         <meta name="description" content={meta.descMenu} />
         <meta name="keywords" content={meta.keysMenu} />
@@ -43,7 +48,7 @@ const Menu = () => {
       <div className="page">
         <AllMenuItems />
 
-        <label className="flex cursor-pointer justify-center select-none items-center my-10">
+        <label className="flex justify-center items-center my-10 cursor-pointer select-none">
           <input
             type="checkbox"
             checked={isChecked}
@@ -52,8 +57,9 @@ const Menu = () => {
             className="sr-only peer"
           />
           <div className="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-primaryGreenLight rounded-full peer  peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all  peer-checked:bg-primaryGreen"></div>
-          <span className="ms-3 text-sm font-medium text-primaryGreen">
-            Show Menu
+          <span className="text-sm font-medium ms-3 text-primaryGreen">
+            {globalState.lang === "en" && "Show Menu"}
+            {globalState.lang === "de" && "TODO: DE lang"}
           </span>
         </label>
 

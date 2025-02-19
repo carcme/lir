@@ -14,7 +14,7 @@ const AnimatedPageSliderData = {
       url: "xs:bg-relaxed",
       urlsm: "bg-relaxedSm",
       desc: [
-        "Every visit to The Lir is more than just a night out. It's an experience. From the warm glow of our lighting to the buzz of conversation in our vibrant outdoor seating, the energy is always just right. Whether you're here to relax, celebrate or watch the big game, our welcoming atmosphere makes every moment special",
+        "Visit The Lir for the full entertainment experience: the warm lighting and outdoor seating ensure the energy is always just right.",
         "Excellence is at the heart of everything we do, from expertly crafted cocktails and perfectly poured pints to friendly service and an unbeatable line-up of live sports and events. We don't just serve drinks - we make memories.",
       ],
       btn1: "Sport Schedule",
@@ -30,9 +30,9 @@ const AnimatedPageSliderData = {
       url: "xs:bg-welcome",
       urlsm: "bg-welcomeSm",
       desc: [
-        "The Lir combines the traditional values of an Irish bar with the modern expectations of good fresh food",
-        "Tucked away but easily accessible in the heart of the city, we have created one of Berlin's true insider highlights",
-        "Situated in a unique historical location, the combination of the natural polished stone interior with an open fireplace in winter and a leafy palm beer garden in summer has allowed us to organically grow this bar into one of Berlin's best.",
+        "The Lir combines the traditional values of an Irish bar with the modern expectations of good, fresh food.",
+        "Tucked away but easily accessible in the heart of the city, we have created one of Berlin's true insider highlights.",
+        "The bar's unique location and natural stone interior, complete with open fireplace and palm beer garden, have helped it become one of the best in Berlin.",
       ],
       btn1: "Sport Schedule",
       btn2: "Menu",

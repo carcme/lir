@@ -17,11 +17,11 @@ const LirDrawer = ({ isOpen, setIsOpen, data }) => {
           onClick={() => {
             setIsOpen(false);
           }}
-          className={`absolute md:w-2/3 xl:w-3/5 bottom-0 bg-primaryGreen top-20 right-0 h-screen max-h-fit shadow-xl duration-500 ease-in-out rounded-bl-full transition-all transform  ${
-            isOpen ? " translate-x-0 " : " translate-x-full "
+          className={`absolute h-[80%] md:w-2/3 xl:w-3/5 bottom-0 bg-primaryGreen top-20 right-0 max-h-fit shadow-xl duration-500 ease-in-out rounded-bl-full transition-all transform  ${
+            isOpen ? "translate-x-0" : "translate-x-full"
           } `}
         >
-          <article className="relative flex flex-col h-fit">
+          <article className="flex relative flex-col h-[100%]">
             <LirGridText
               name={name}
               tag={tag}
@@ -34,7 +34,7 @@ const LirDrawer = ({ isOpen, setIsOpen, data }) => {
           </article>
         </section>
         <section
-          className=" w-screen h-full cursor-pointer "
+          className="w-screen h-full cursor-pointer"
           onClick={() => {
             setIsOpen(false);
           }}
