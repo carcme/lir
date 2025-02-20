@@ -1,5 +1,4 @@
 import React, { useState, useRef } from "react";
-import { GiShamrock } from "react-icons/gi";
 
 import { gsap, Power1 } from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -76,9 +75,9 @@ const HeroTextSlideIn = ({ endAction }) => {
 
   return (
     <>
-      <div className="page-transition__red">
-        <div className="w-screen h-screen flex items-center justify-center bg-primaryGreen">
-          <div className="w-2/5 h-2/5 relative">
+      <div className="">
+        <div className="flex justify-center items-center w-screen h-screen bg-primaryGreen">
+          <div className="relative w-2/5 h-2/5">
             <div
               ref={left}
               id="left"
@@ -90,10 +89,10 @@ const HeroTextSlideIn = ({ endAction }) => {
               <div
                 ref={logo}
                 id="logo"
-                className="uppercase font-Hind text-primaryGreenDark text-6xl pl-5"
+                className="pl-5 text-6xl uppercase font-Hind text-primaryGreenDark"
               >
                 Berlin
-                {/* <GiShamrock className="text-white text-3xl" /> */}
+                {/* <GiShamrock className="text-3xl text-white" /> */}
               </div>
             </div>
             <div
@@ -107,7 +106,7 @@ const HeroTextSlideIn = ({ endAction }) => {
         </div>
         {/* <div
           id="mainContent"
-          className="w-screen h-screen flex items-center justify-center bg-black"
+          className="flex justify-center items-center w-screen h-screen bg-black"
         ></div> */}
       </div>
     </>

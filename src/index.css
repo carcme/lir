@@ -17,6 +17,11 @@
   scroll-behavior: smooth;
   scrollbar-color: #005229 #006633;
 }
+
+video::-webkit-media-controls {
+  display: invisible !important;
+}
+
 .webkitAutoFillOverride:-webkit-autofill,
 .webkitAutoFillOverride:-webkit-autofill:hover,
 .webkitAutoFillOverride:-webkit-autofill:focus,
@@ -61,7 +66,7 @@
   filter: brightness(80%); */
 }
 .tooltip {
-  @apply invisible absolute;
+  @apply absolute invisible;
 }
 
 .has-tooltip:hover .tooltip {
@@ -71,7 +76,7 @@
 /* ##### AnimatedPageSlider ####### */
 
 .carousel {
-  @apply relative h-screen w-screen overflow-hidden;
+  @apply overflow-hidden relative w-screen h-screen;
 }
 /* h-[150px] w-[150px]  */
 .carousel .list .carouselitem {
@@ -80,7 +85,7 @@
 
 .carousel .list .carouselitem:nth-child(1),
 .carousel .list .carouselitem:nth-child(2) {
-  @apply left-0 top-0 h-full w-full translate-x-0 translate-y-0 rounded-none;
+  @apply top-0 left-0 w-full h-full rounded-none translate-x-0 translate-y-0;
 }
 .carousel .list .carouselitem:nth-child(3) {
   @apply left-[-47%] xs:left-[67%];

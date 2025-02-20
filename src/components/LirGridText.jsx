@@ -2,6 +2,9 @@ import React from "react";
 import cn from "@/lib/cn";
 
 const LirGridText = ({ name, tag, desc, btn1, btn2, btn1Link, btn2Link }) => {
+  const paragraphs = desc.length;
+  console.log("🚀 ~ LirGridText ~ paragraphs:", paragraphs);
+
   return (
     <>
       <div className="flex flex-col justify-center items-center mx-4 md:mx8 md:items-end">
@@ -11,7 +14,9 @@ const LirGridText = ({ name, tag, desc, btn1, btn2, btn1Link, btn2Link }) => {
         <div className="text-sm text-justify text-white lg:text-md">
           {desc.map((text, i) => (
             <p
-              className="py-2 leading-5 sm:pl-16 testclass"
+              className={`py-2 leading-5 sm:pl-16 testclass ${
+                paragraphs > 2 ? "sm:pl-24" : "sm:pl-20"
+              }`}
               // style={{ marginLeft: (i + 1) * 38 + "px" }}
               key={i}
             >

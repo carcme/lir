@@ -34,16 +34,15 @@ const Navbar = () => {
       </Link>
       {/* Desktop Navigation */}
 
-      <ul className="hidden text-white md:flex">
+      <ul className="hidden ml-8 text-white md:flex">
         {navbarTexts.map((item, index) => (
-          <li
-            key={index}
-            className="p-4 m-2 capitalize duration-300 cursor-pointer"
-          >
+          <li key={index} className="px-4 mx-2 capitalize cursor-pointer">
             <NavLink
               to={item.path}
               className={({ isActive }) =>
-                isActive ? "relative text-white" : "relative"
+                isActive
+                  ? "relative before:absolute before:-left-0 before:-top-2 before:block before:border before:border-white before:w-full before:content-['']"
+                  : "text-slate-300"
               }
             >
               {item.text}
@@ -53,14 +52,14 @@ const Navbar = () => {
       </ul>
       <div
         id="big-nav-buttons"
-        className="flex flex-grow justify-end px-4 mb-4 text-white"
+        className="flex flex-grow justify-end px-2 text-white md:flex-grow-0"
       >
-        <div className="items-end mt-4 space-x-4">
-          <LangBtn clsName="z-50 cursor-pointer p-4" />
+        <div className="items-end space-x-2 sm:space-x-6">
+          <LangBtn clsName="z-50 cursor-pointer px-2" />
           <Link to="/sports">
             <button
               className="p-3 bg-transparent rounded-full border-2 transition duration-300 hover:bg-primaryGreenDark border-primaryGreenDark hover:cursor-pointer"
-              aria-label="Show mysteries"
+              aria-label="Show sports"
             >
               <PiTelevisionSimpleBold size={16} color="#eee" />
             </button>

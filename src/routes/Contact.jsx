@@ -45,7 +45,7 @@ const Contact = () => {
       </Helmet>
       <div className="page">
         <section className="relative text-primaryGreen body-font">
-          <div className="absolute inset-0 bg-white">
+          <div className="relative bg-white sm:absolute sm:inset-0">
             {!mapLoaded && (
               <h2 className="absolute text-4xl inset-0 top-[6%] md:right-[50%] lg:right-0 md:top-1/2 font-semibold text-primaryGreen justify-center text-center z-50">
                 Loading Map
@@ -70,8 +70,8 @@ const Contact = () => {
             netlify="true"
             netlify-honeypot="bot-field"
           >
-            <div className="container flex px-5 py-24 mx-auto">
-              <div className="flex relative z-10 flex-col p-8 mt-10 w-full rounded-lg shadow-md lg:w-1/3 md:w-1/2 bg-primaryGreen md:ml-auto md:mt-0">
+            <div className="container flex mx-auto sm:px-5 sm:py-24">
+              <div className="flex relative z-10 flex-col p-4 mt-4 w-full rounded-lg shadow-md lg:w-1/3 md:w-1/2 bg-primaryGreen md:ml-auto md:mt-0">
                 <h2 className="mb-1 text-lg font-medium text-white title-font">
                   {globalState.lang === "en" ? "Open Hours" : "TODO"}
                 </h2>

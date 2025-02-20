@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import helmetData from "@/json/helmetData";
-import AnimatedPageSlider from "../components/hero/AnimatedPageSlider";
 import AnimatedPageSliderData from "../json/AnimatedPageSliderData";
 
 import {
@@ -11,7 +10,7 @@ import {
 } from "../context/GlobalContextProvider";
 
 import LirGrid from "../components/LirGrid";
-import HeroTextSlideIn from "../components/gsap/HeroTextSlideIn";
+import HeroMotionSlide from "../components/gsap/HeroMotionSlide";
 
 const Home = () => {
   const globalDispatch = useContext(GlobalDispatchContext);
@@ -29,7 +28,7 @@ const Home = () => {
     });
     setTimeout(() => {
       globalDispatch({ type: "TOGGLE_WELCOME" });
-    }, 1000);
+    }, 700);
   };
 
   useEffect(() => {
@@ -63,16 +62,18 @@ const Home = () => {
         <meta name="google" content={meta.google} />
       </Helmet>
 
-      {globalState.welcome && <HeroTextSlideIn endAction={welcomeFinished} />}
+      {globalState.welcome && <HeroMotionSlide endAction={welcomeFinished} />}
+      {/* {globalState.welcome && <HeroTextSlideIn endAction={welcomeFinished} />} */}
 
       {/* this is hidden by the text color and4 the navbar */}
       <h1 className="text-primaryGreen bg-primaryGreen">
         The Lir Berlin - Great Drinks, Live Sports & Warm Hospitality
       </h1>
+
       {/* <AnimatedPageSlider data={data} /> */}
       <div
         ref={scrollTo}
-        className={`bg-primaryGreen pb-6 px-6 ${
+        className={`block bg-primaryGreen pb-6 px-6 ${
           showHeader ? "pt-20" : "pt-20"
         }`}
       >
