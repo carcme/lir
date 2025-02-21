@@ -11,6 +11,7 @@ import {
 
 import LirGrid from "../components/LirGrid";
 import HeroMotionSlide from "../components/gsap/HeroMotionSlide";
+import LirGridBento from "../components/LirGridBento";
 
 const Home = () => {
   const globalDispatch = useContext(GlobalDispatchContext);
@@ -76,6 +77,7 @@ const Home = () => {
           showHeader ? "pt-20" : "pt-20"
         }`}
       >
+        <LirGridBento showHeader={showHeader} data={data} />
         <LirGrid showHeader={showHeader} data={data} />
       </div>
       {/* <div className="bg-primaryGreen">
