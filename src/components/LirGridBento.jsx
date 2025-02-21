@@ -82,17 +82,18 @@ const LirGridBento = ({ showHeader = false, data }) => {
           {dataItems.map((item, index) => (
             <div
               key={index}
-              className={`relative bg-gradient-to-r from-green-500 to-green-700 rounded-lg ${
-                index === 0
-                  ? "col-span-4 row-span-4"
-                  : index === 1
-                  ? "col-span-4 row-span-2"
-                  : index === 2
-                  ? "col-span-4 row-span-2"
-                  : index === 3
-                  ? "col-span-3 row-span-4"
-                  : "col-span-5 row-span-4"
-              }`}
+              className={`relative
+                ${
+                  index === 0
+                    ? "col-span-4 row-span-4"
+                    : index === 1
+                    ? "col-span-4 row-span-2"
+                    : index === 2
+                    ? "col-span-4 row-span-2"
+                    : index === 3
+                    ? "col-span-3 row-span-4"
+                    : "col-span-5 row-span-4"
+                }`}
             >
               <img
                 src={item.image}

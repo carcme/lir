@@ -45,8 +45,8 @@ const LirGridText = ({
             ))}
           </div>
           <div
-            className={`mt-2 mx-10 w-full text-center mb-5 text-xl text-white capitalize ${
-              orientation === " " ? "" : "sm:text-right sm:mr-10"
+            className={`mt-2 mx-10 w-full mb-5  text-center text-xl text-white capitalize ${
+              orientation === "center" ? "" : "sm:text-right sm:mr-10"
             }`}
           >
             {tag}

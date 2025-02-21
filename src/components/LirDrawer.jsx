@@ -6,7 +6,7 @@ const POSITION_CLASSES = {
   right:
     "absolute h-[80%] md:w-2/3 xl:w-3/5 bottom-0 bg-primaryGreen top-20 right-0 max-h-fit shadow-xl duration-500 ease-in-out rounded-bl-full transition-all transform",
   center:
-    "absolute right-0 bottom-0 w-full shadow-xl transition-all duration-500 ease-in-out transform bg-primaryGreen max-h-fit",
+    "absolute right-0 bottom-0 w-full  transition-all duration-500 ease-in-out transform bg-primaryGreen max-h-fit rounded-t-xl",
 };
 
 const TRANSLATE_CLASSES = {
@@ -24,7 +24,7 @@ const LirDrawer = ({ isOpen, setIsOpen, data, orientation = "right" }) => {
     <>
       <main
         className={
-          "fixed mx-auto overflow-hidden z-50 inset-0 rounded-t-xl transform ease-in-out" +
+          "fixed mx-auto overflow-hidden z-10 inset-0 transform ease-in-out" +
           (isOpen
             ? " transition-opacity opacity-100 duration-500 translate-x-0  "
             : " transition-all delay-500 opacity-0 translate-x-full  ") +
