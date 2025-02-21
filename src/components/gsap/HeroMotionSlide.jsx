@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Rays from "./Rays";
-import lirFire from "../../assets/lirFire.mp4";
 
 const HeroMotionSlide = ({ endAction }) => {
   const [hasRun, setHasRun] = useState(false);

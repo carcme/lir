@@ -1,17 +1,17 @@
-import React, { useCallback, useEffect, useState } from "react";
-import client from "../client";
+import React, { useEffect, useState } from "react";
 import ItemGrid from "./ItemGrid";
 import { useLirMenuStore } from "../store";
 
 const AllMenuItems = () => {
   const [foodItems, setFoodItems] = useState([]);
   const [drinksItems, setDrinksItems] = useState([]);
-
   const [menus, setMenus] = useState(useLirMenuStore.getState().menu);
 
   useEffect(() => {
-    setFoodItems(menus.filter((item) => item.tags[0] === "food"));
-    setDrinksItems(menus.filter((item) => item.tags[0] === "drink"));
+    if (menus) {
+      setFoodItems(menus.filter((item) => item.tags[0] === "food"));
+      setDrinksItems(menus.filter((item) => item.tags[0] === "drink"));
+    }
   }, [menus]);
 
   return (

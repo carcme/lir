@@ -16,7 +16,6 @@ const Home = () => {
   const globalDispatch = useContext(GlobalDispatchContext);
   const globalState = useContext(GlobalStateContext);
   const data = getLanguage(globalState.lang, AnimatedPageSliderData);
-  console.log("🚀 ~ Home ~ data:", data);
   const meta = getLanguage(globalState.lang, helmetData);
   const scrollTo = useRef(null);
 

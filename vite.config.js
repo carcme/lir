@@ -23,6 +23,7 @@ export default defineConfig({
     outDir,
     emptyOutDir: true,
     publicDir: "public",
+    // chunkSizeWarningLimit: 600,
     rollupOptions: {
       input: {
         // resolve the reload button for SPA routing

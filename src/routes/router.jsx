@@ -1,10 +1,13 @@
+import React from "react";
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import Home from "./Home";
 import Sports from "./Sports";
 import Contact from "./Contact";
 import Error from "./Error";
-import Temp from "./Temp";
+const Temp = React.lazy(() => import("./Temp"));
+// import Temp from "";
+//const Menu = React.lazy(() => import("./Menu"));
 import Menu from "./Menu";
 import SinglePost from "./SinglePost";
 
@@ -21,10 +24,6 @@ const router = createBrowserRouter([
         path: "/menu/:slug",
         element: <SinglePost />,
       },
-      // {
-      //   path: "/menu/:id",
-      //   element: <SinglePost />,
-      // },
       {
         path: "/menu",
         element: <Menu />,

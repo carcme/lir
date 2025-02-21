@@ -1,13 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import LirDrawer from "./LirDrawer";
-import LirGridText from "./LirGridText";
 
-import {
-  GlobalDispatchContext,
-  GlobalStateContext,
-  getLanguage,
-} from "../context/GlobalContextProvider";
+import { GlobalStateContext } from "../context/GlobalContextProvider";
 
 const LirGrid = ({ showHeader = false, data }) => {
   const globalState = useContext(GlobalStateContext);

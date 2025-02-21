@@ -8,14 +8,14 @@ export const useLirMenuStore = create()(
 
       setMenus: () => set((state) => ({ menus: state.menus })),
 
-      getSlug: (slug) =>
-        set((state) => ({
-          menus: state.menus.map((menu) =>
-            menu.slug === slug ? { menu } : []
-          ),
-        })),
-
-      getMenu: () => ({ menus: menus }),
+      getBySlug: (slug) => {
+        get((state) => ({
+          slug: {
+            ...state.slug,
+            slug: [...state.user.slug, slug],
+          },
+        }));
+      },
     }),
     {
       name: "menu-storage", // name of the item in the storage (must be unique)

@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import helmetData from "@/json/helmetData";
 import AllMenuItems from "../components/AllMenuItems";
+// const Pdf = React.lazy(() => import("../components/Pdf"));
 import Pdf from "../components/Pdf";
 
 import {

@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import cn from "@/lib/cn";
 
 const AnimatedPageSlider = ({ data }) => {
@@ -44,7 +44,7 @@ const AnimatedPageSlider = ({ data }) => {
             // }}
           >
             <div className="absolute inset-0 group-hover:bg-[#000000]/30"></div>
-            <div className="content opacity-0 group-hover:opacity-100 transition-opacity duration-300 group-hover:grayscale-0">
+            <div className="opacity-0 transition-opacity duration-300 content group-hover:opacity-100 group-hover:grayscale-0">
               <div className="lg:text-5xl text-2xl pt-12 xs:pt-20 lg:pt-8 uppercase font-bold text-white opacity-0 animate-[blurScale_700ms_ease-in-out_300ms_1_forwards]">
                 {slide.name}
               </div>
@@ -63,7 +63,7 @@ const AnimatedPageSlider = ({ data }) => {
                 {slide.btn1Link.length > 0 && (
                   <a
                     href={slide.btn1Link}
-                    className="hidden xxs:inline-block rounded-lg sm:bg-primaryGreen px-4 py-1 xs:py-3 text-center text-sm font-semibold text-white ring-1 ring-white  transition duration-100 hover:bg-primaryGreenDark focus-visible:ring active:bg-accentDecoration md:text-base bg-black/50"
+                    className="hidden px-4 py-1 text-sm font-semibold text-center text-white rounded-lg ring-1 ring-white transition duration-100 xxs:inline-block sm:bg-primaryGreen xs:py-3 hover:bg-primaryGreenDark focus-visible:ring active:bg-accentDecoration md:text-base bg-black/50"
                   >
                     {slide.btn1}
                   </a>
@@ -73,7 +73,7 @@ const AnimatedPageSlider = ({ data }) => {
                     href={slide.btn2Link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hidden xxs:inline-block rounded-lg sm:bg-white px-4 py-1 xs:py-3 text-center text-sm font-semibold text-white sm:text-primaryGreen ring-1 ring-white transition duration-100 hover:bg-primaryGreen hover:text-white focus-visible:ring active:text-primaryGreen md:text-base bg-black/50"
+                    className="hidden px-4 py-1 text-sm font-semibold text-center text-white rounded-lg ring-1 ring-white transition duration-100 xxs:inline-block sm:bg-white xs:py-3 sm:text-primaryGreen hover:bg-primaryGreen hover:text-white focus-visible:ring active:text-primaryGreen md:text-base bg-black/50"
                   >
                     {slide.btn2}
                   </a>
@@ -88,13 +88,13 @@ const AnimatedPageSlider = ({ data }) => {
       </div>
       <div className="absolute z-10 w-[200px] max-w-[30%] flex gap-2.5 xs:left-[6%] left-[3%] translate-y-[-20%] top-[93%] xs:top-[90%]">
         <button
-          className="sm:w-14 sm:h-14 w-10 h-10 rotate-180 sm:rotate-0 bg-primaryGreen font-extrabold text-white text-base  transition-colors duration-300 cursor-pointer hover:bg-white hover:text-primaryGreen"
+          className="w-10 h-10 text-base font-extrabold text-white transition-colors duration-300 rotate-180 cursor-pointer sm:w-14 sm:h-14 sm:rotate-0 bg-primaryGreen hover:bg-white hover:text-primaryGreen"
           onClick={handlePrevious}
         >
           &lt;
         </button>
         <button
-          className="hidden sm:block sm:w-14 sm:h-14 w-10 h-10 bg-primaryGreen font-extrabold text-white text-base  transition-colors duration-300 cursor-pointer hover:bg-white hover:text-primaryGreen"
+          className="hidden w-10 h-10 text-base font-extrabold text-white transition-colors duration-300 cursor-pointer sm:block sm:w-14 sm:h-14 bg-primaryGreen hover:bg-white hover:text-primaryGreen"
           onClick={handleNext}
         >
           &gt;

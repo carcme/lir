@@ -4,7 +4,6 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { HelmetProvider } from "react-helmet-async";
 import GlobalContextProvider from "./context/GlobalContextProvider";
-import { useLirMenuStore } from "./store";
 import { getMenus } from "./lib/contentful";
 
 function App() {

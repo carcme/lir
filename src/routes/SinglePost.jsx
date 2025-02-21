@@ -3,9 +3,9 @@ import { Link, useParams } from "react-router-dom";
 import { FaEuroSign } from "react-icons/fa";
 import { useLirMenuStore } from "../store";
 
-export default function SinglePost() {
-  const allMenus = useLirMenuStore.getState().menu;
+const SinglePost = () => {
   const { slug } = useParams();
+  const allMenus = useLirMenuStore.getState().menu;
   const [entry, setEntry] = useState(
     allMenus.filter((item) => item.slug === slug)[0]
   );
@@ -106,4 +106,5 @@ export default function SinglePost() {
       </main>
     </>
   );
-}
+};
+export default SinglePost;

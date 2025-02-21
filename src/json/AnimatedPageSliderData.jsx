@@ -168,7 +168,7 @@ const AnimatedPageSliderData = {
     {
       id: 3,
       name: "Erlebe die Magie von Lir",
-      tag: "Kommen Sie noch heute zu uns und lassen Sie die gute Zeit beginnen!",
+      tag: "Kommen Sie heute und lassen Sie die gute Zeit beginnen!",
       image: Warm,
       url: "xs:bg-warmOutside",
       urlsm: "bg-warmOutsideSm",

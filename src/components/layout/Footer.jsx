@@ -1,12 +1,12 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import {
   FaFacebook,
-  FaTwitter,
+  // FaTwitter,
   FaInstagram,
-  FaYoutube,
-  FaLinkedin,
-  FaGithub,
+  // FaYoutube,
+  // FaLinkedin,
+  // FaGithub,
 } from "react-icons/fa";
 
 import navData from "../../data/navbarLinks";
