@@ -28,7 +28,7 @@ const LirGrid = ({ showHeader = false, data }) => {
         </header>
       )}
 
-      <p className="py-2 text-2xl text-white">Standard Grid Example</p>
+      <p className="py-2 pt-5 text-2xl text-white">Standard Grid Example</p>
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {dataItems.map((item, i) => {
           return (
@@ -63,6 +63,7 @@ const LirGrid = ({ showHeader = false, data }) => {
                 isOpen={isOpen}
                 setIsOpen={setIsOpen}
                 data={dataItems[itemIndex]}
+                orientation="right"
               ></LirDrawer>
             </div>
           );
