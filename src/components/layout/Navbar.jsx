@@ -30,7 +30,12 @@ const Navbar = () => {
     >
       {/* Logo */}
       <Link to="/" className="z-50 pl-4 sm:pl-12">
-        <img src={Logo} alt="The Lir Berlin Logo" className="w-16 h-16" />
+        <img
+          src={Logo}
+          aria-label="logo/Home"
+          alt="The Lir Berlin Logo"
+          className="w-16 h-16"
+        />
       </Link>
       {/* Desktop Navigation */}
 
@@ -39,6 +44,7 @@ const Navbar = () => {
           <li key={index} className="px-4 mx-2 capitalize cursor-pointer">
             <NavLink
               to={item.path}
+              aria-label={item.text}
               className={({ isActive }) =>
                 isActive
                   ? "relative before:absolute before:-left-0 before:-top-2 before:block before:border before:border-white before:w-full before:content-['']"
@@ -56,10 +62,10 @@ const Navbar = () => {
       >
         <div className="items-end space-x-2 sm:space-x-6">
           <LangBtn clsName="z-50 cursor-pointer px-2" />
-          <Link to="/sports">
+          <Link to="/sports" aria-label="sports">
             <button
+              tabIndex={-1}
               className="p-3 bg-transparent rounded-full border-2 transition duration-300 hover:bg-primaryGreenDark border-primaryGreenDark hover:cursor-pointer"
-              aria-label="Show sports"
             >
               <PiTelevisionSimpleBold size={16} color="#eee" />
             </button>
@@ -67,6 +73,7 @@ const Navbar = () => {
 
           <Link to="/contact">
             <button
+              tabIndex={-1}
               className="p-3 rounded-full border-2 transition duration-300 bg-primaryGreenDark hover:bg-primaryGreenDark/20 border-primaryGreenDark hover:cursor-pointer"
               aria-label="Contact"
             >
@@ -83,7 +90,14 @@ const Navbar = () => {
       </div>
       {/* Mobile Navigation Icon */}
       <div className="block transition duration-700 ease-in-out md:hidden">
-        <Hamburger toggled={isOpen} toggle={setOpen} color="#eee" size={20} />
+        <Hamburger
+          toggled={isOpen}
+          arial-label="Open menu"
+          aria-expanded={isOpen}
+          toggle={setOpen}
+          color="#eee"
+          size={20}
+        />
       </div>
       {/* Mobile Navigation Menu */}
       <ul
@@ -99,6 +113,7 @@ const Navbar = () => {
         {navbarTexts.map((item, index) => (
           <NavLink
             to={item.path}
+            aria-label={item.text}
             key={index}
             className={({ isActive }) =>
               isActive ? " text-white " : "text-gray-400"

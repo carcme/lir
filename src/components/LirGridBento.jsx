@@ -97,7 +97,8 @@ const LirGridBento = ({ showHeader = false, data }) => {
             >
               <img
                 src={item.image}
-                alt=""
+                alt={item.name}
+                aria-label={item.name}
                 className="object-cover w-full h-full rounded-lg"
               />
               <BentoOverlay text={item} select={isClicked} />
@@ -106,6 +107,7 @@ const LirGridBento = ({ showHeader = false, data }) => {
                 setIsOpen={setIsOpen}
                 data={dataItems[itemIndex]}
                 orientation="center"
+                aria-expanded={isOpen}
               ></LirDrawer>
             </div>
           ))}

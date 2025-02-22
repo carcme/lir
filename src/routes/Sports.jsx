@@ -62,7 +62,10 @@ const Sports = () => {
           target="_blank"
           className="text-xl hover:underline"
         >
-          <button className="px-4 bg-white rounded-md border py-3text-white text-primaryGreen hover:bg-primaryGreen hover:border-white hover:text-white">
+          <button
+            aria-label="fixture list on facebook"
+            className="px-4 bg-white rounded-md border py-3text-white text-primaryGreen hover:bg-primaryGreen hover:border-white hover:text-white"
+          >
             {globalState.lang === "en" &&
               "Visit our Facebook page for our live fixture list"}
             {globalState.lang === "de" &&

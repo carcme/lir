@@ -98,7 +98,10 @@ const SinglePost = () => {
         </div>
         <div className="flex justify-end w-full h-fit">
           <Link to="/menu">
-            <button className="px-4 py-2 mt-5 text-base font-extrabold text-white rounded-md border transition-colors duration-300 cursor-pointer bg-primaryGreen hover:bg-white hover:border-primaryGreen hover:text-primaryGreen">
+            <button
+              aria-label="back"
+              className="px-4 py-2 mt-5 text-base font-extrabold text-white rounded-md border transition-colors duration-300 cursor-pointer bg-primaryGreen hover:bg-white hover:border-primaryGreen hover:text-primaryGreen"
+            >
               Back
             </button>
           </Link>

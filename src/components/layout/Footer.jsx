@@ -36,6 +36,7 @@ export const Footer = () => {
                     <div className="flex gap-4">
                       {/* instagram */}
                       <Link
+                        aria-label="instagram"
                         to="https://www.instagram.com/thelirberlin"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -50,6 +51,7 @@ export const Footer = () => {
                       <Link
                         to="https://www.facebook.com/irishpubberlin/"
                         target="_blank"
+                        aria-label="facebook"
                         rel="noopener noreferrer"
                       >
                         <span className="inner"></span>
@@ -63,6 +65,7 @@ export const Footer = () => {
                   <div className="text-[14px] leading-6 tracking-widest text-gray-200">
                     <Link
                       to={"https://maps.app.goo.gl/AZEBrbXgjTQbpgFC7"}
+                      aria-label="address"
                       target="_blank"
                     >
                       <p className="mb-4 w-fit hover:text-white">
@@ -76,9 +79,9 @@ export const Footer = () => {
                       {/* <Link to={"#"} className="hover:text-gray-400"> */}
                       <a
                         href="mailto:info@thelir.de"
+                        aria-label="email"
                         className="hover:text-white"
                       >
-                        {" "}
                         Click Here
                       </a>
                       {/* </Link> */}
@@ -99,13 +102,19 @@ export const Footer = () => {
                     {text.map((item, index) => (
                       <li
                         key={index}
+                        aria-label={item.text}
                         className="relative ml-2 translate-x-[-5px] cursor-pointer py-1.5 uppercase duration-200 before:absolute before:-left-5 before:top-[14px] before:block before:h-1.5 before:w-1.5 before:rounded-full before:bg-transparent before:font-normal before:transition-all before:duration-200 before:content-[''] hover:text-white hover:before:bg-white"
                       >
                         <Link to={item.path}>{item.text}</Link>
                       </li>
                     ))}
                     <li className="relative ml-2 translate-x-[-5px] cursor-pointer py-1.5 uppercase duration-200 before:absolute before:-left-5 before:top-[14px] before:block before:h-1.5 before:w-1.5 before:rounded-full before:bg-transparent before:font-normal before:transition-all before:duration-200 before:content-[''] hover:text-white hover:before:bg-white">
-                      <a href={Pdf} target="_blank" rel="noopener noreferrer">
+                      <a
+                        href={Pdf}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="menu"
+                      >
                         {globalState.lang === "en" ? "Our Menu" : "Unser Menü"}
                       </a>
                     </li>
@@ -116,6 +125,7 @@ export const Footer = () => {
                     Location
                   </h2>
                   <Link
+                    aria-label="map"
                     to={"https://maps.app.goo.gl/AZEBrbXgjTQbpgFC7"}
                     target="_blank"
                   >
@@ -135,6 +145,7 @@ export const Footer = () => {
               <div className="container flex flex-col items-center px-5 py-6 mx-auto text-sm text-gray-400">
                 <Link
                   to="https://www.hammer3.com"
+                  aria-label="hammer3.com"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

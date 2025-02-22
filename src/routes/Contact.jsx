@@ -56,6 +56,7 @@ const Contact = () => {
                 className="rounded-lg"
                 width="100%"
                 height="100%"
+                aria-label="map"
                 title="The Lir Berlin"
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9710.926251435141!2d13.3340262!3d52.5201969!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a85109d53aa221%3A0x76f0488133aba72!2sThe%20Lir!5e0!3m2!1sen!2sde!4v1738666779264!5m2!1sen!2sde"
                 onLoad={() => onMapLoaded()}
@@ -95,7 +96,9 @@ const Contact = () => {
                     Email
                     <input
                       id="email"
+                      tabindex="1"
                       type="email"
+                      aria-required="true"
                       name="email"
                       className="px-3 py-1 w-full text-base leading-8 text-gray-700 bg-white rounded border transition-colors duration-200 ease-in-out outline-none border-primaryGreen focus:border-primaryGreen focus:ring-1 focus:ring-primaryGreen"
                     />
@@ -111,13 +114,17 @@ const Contact = () => {
                       id="message"
                       type="text"
                       name="message"
+                      aria-required="true"
+                      tabindex="2"
                       className="px-3 py-1 w-full h-32 text-base leading-6 text-gray-700 bg-white rounded border transition-colors duration-200 ease-in-out outline-none resize-none border-primaryGreen focus:border-primaryGreen focus:ring-1 focus:ring-primaryGreen"
                     ></textarea>
                   </label>
                 </div>
                 <button
                   className="px-6 py-2 text-lg text-white rounded border border-white transition-colors duration-300 ease-in-out bg-primaryGreen focus:outline-none hover:bg-white hover:text-primaryGreen"
+                  tabindex="3"
                   type="submit"
+                  aria-label="send"
                   // disabled="true"
                 >
                   Send

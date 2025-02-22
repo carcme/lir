@@ -14,7 +14,7 @@ const LirGridText = ({
   return (
     <>
       <div
-        className={`flex flex-col justify-center items-center mx-auto w- max-w-4xl  ${
+        className={`flex flex-col bg-primaryGreenDark justify-center items-center mx-auto w- max-w-4xl  ${
           orientation === "center"
             ? "mt-0 border-t border-x px-2 border-white/50 rounded-t-xl"
             : ""
@@ -22,7 +22,7 @@ const LirGridText = ({
       >
         <div className="flex flex-col justify-center items-center w-full max-w-5xl text-center text-white">
           <div
-            className={`pt-1 text-2xl font-bold uppercase lg:text-5xl lg:pb-4 xs:pt-5`}
+            className={`pt-5 text-2xl font-bold uppercase lg:text-5xl lg:pb-4`}
           >
             {name}
           </div>
@@ -57,6 +57,7 @@ const LirGridText = ({
             <Link
               to={btn1Link}
               className="inline-block px-4 py-2 mx-1 text-sm font-semibold text-center text-white rounded-lg ring-1 ring-white transition duration-100 bg-primaryGreen xs:py-3 hover:bg-primaryGreenDark focus-visible:ring active:bg-accentDecoration md:text-base"
+              aria-label={btn1}
             >
               {btn1}
             </Link>
@@ -64,6 +65,7 @@ const LirGridText = ({
           {btn2Link?.length > 0 && (
             <Link
               to={btn2Link}
+              aria-label={btn2}
               className="inline-block px-4 py-2 mx-1 text-sm font-semibold text-center bg-white rounded-lg ring-1 ring-white transition duration-100 xs:py-3 text-primaryGreen hover:bg-primaryGreen hover:text-white focus-visible:ring active:text-primaryGreen md:text-base bg-black/50"
             >
               {btn2}

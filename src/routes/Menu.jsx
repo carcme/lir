@@ -53,12 +53,16 @@ const Menu = () => {
           <input
             type="checkbox"
             checked={isChecked}
+            aria-expanded={isChecked}
             onChange={handleCheckboxChange}
             value=""
             className="sr-only peer"
           />
           <div className="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-primaryGreenLight rounded-full peer  peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all  peer-checked:bg-primaryGreen"></div>
-          <span className="text-sm font-medium ms-3 text-primaryGreen">
+          <span
+            aria-label="show menu"
+            className="text-sm font-medium ms-3 text-primaryGreen"
+          >
             {globalState.lang === "en" && "Show Menu"}
             {globalState.lang === "de" && "TODO: DE lang"}
           </span>

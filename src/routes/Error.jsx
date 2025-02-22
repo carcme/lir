@@ -8,19 +8,20 @@ const Home = () => {
   return (
     <>
       <div className="py-6 pt-20 bg-white lg:pt-28 lg:py-12">
-        <div className="max-w-screen-lg px-4 mx-auto md:px-8">
+        <div className="px-4 mx-auto max-w-screen-lg md:px-8">
           <div className="grid gap-8 sm:grid-cols-2">
-            <div className="overflow-hidden bg-gray-100 rounded-lg h-80 md:h-auto">
+            <div className="overflow-hidden h-80 bg-gray-100 rounded-lg md:h-auto">
               <img
                 src="https://img.freepik.com/premium-photo/broken-bottle-isolated-white-background_51524-17283.jpg?w=1060"
                 loading="lazy"
-                alt="Photo by Theo Crazzolara"
+                alt="Error loading page"
+                aria-label="Error loading page"
                 className="object-cover object-center w-full h-full"
               />
             </div>
 
-            <div className="flex flex-col items-center justify-center sm:items-start md:py-24 lg:py-32">
-              <p className="mb-4 text-sm font-semibold text-primaryGreen uppercase md:text-base">
+            <div className="flex flex-col justify-center items-center sm:items-start md:py-24 lg:py-32">
+              <p className="mb-4 text-sm font-semibold uppercase text-primaryGreen md:text-base">
                 Error 404
               </p>
               <h1 className="mb-2 text-2xl font-bold text-center text-gray-800 sm:text-left md:text-3xl">
@@ -35,7 +36,8 @@ const Home = () => {
                 <div>
                   <a
                     href="/"
-                    className="inline-block text-sm text-primaryGreen transition duration-100 hover:text-primaryGreenLight active:text-primaryGreenLight md:text-base"
+                    aria-label="Return to home"
+                    className="inline-block text-sm transition duration-100 text-primaryGreen hover:text-primaryGreenLight active:text-primaryGreenLight md:text-base"
                   >
                     Go Back Home
                   </a>
