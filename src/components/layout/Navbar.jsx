@@ -113,11 +113,13 @@ const Navbar = () => {
       >
         {/* Mobile Navigation Items */}
         {navbarTexts.map((item, index) => (
-          <li className="z-50 p-4 border-b duration-300 cursor-pointer border-primaryGreen hover:border-gray-400 hover:font-extrabold hover:text-white">
+          <li
+            key={index}
+            className="z-50 p-4 border-b duration-300 cursor-pointer border-primaryGreen hover:border-gray-400 hover:font-extrabold hover:text-white"
+          >
             <NavLink
               to={item.path}
               aria-label={item.text}
-              key={index}
               className={({ isActive }) =>
                 isActive ? " text-white " : "text-gray-400"
               }

@@ -1,14 +1,19 @@
 import { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { FaEuroSign } from "react-icons/fa";
 import { useLirMenuStore } from "../store";
 
 const SinglePost = () => {
+  const navigate = useNavigate();
   const { slug } = useParams();
   const allMenus = useLirMenuStore.getState().menu;
   const [entry, setEntry] = useState(
     allMenus.filter((item) => item.slug === slug)[0]
   );
+
+  const onClick = () => {
+    navigate(-1);
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -20,6 +25,7 @@ const SinglePost = () => {
         <div className="recipe-page animate-txtBlur">
           {/* hero */}
           <section className="grid gap-12 sm:grid-flow-col">
+            {/* TODO: return to menu location  */}
             <img
               src={entry.image.url}
               alt={
@@ -29,6 +35,7 @@ const SinglePost = () => {
               }
               title={entry.title}
               className="h-[400px] w-full object-cover rounded-lg"
+              onClick={onClick}
             />
             <article className="flex flex-col justify-center">
               <h2 className="m-0 mb-[1.38rem] text-2xl sm:text-3xl font-bold leading-[1.75] capitalize  text-primaryGreen tracking-wide">
@@ -97,14 +104,15 @@ const SinglePost = () => {
           </section>
         </div>
         <div className="flex justify-end w-full h-fit">
-          <Link to="/menu">
-            <button
-              aria-label="back"
-              className="px-4 py-2 mt-5 text-base font-extrabold text-white rounded-md border transition-colors duration-300 cursor-pointer bg-primaryGreen hover:bg-white hover:border-primaryGreen hover:text-primaryGreen"
-            >
-              Back
-            </button>
-          </Link>
+          {/* <Link to="/menu"> */}
+          <button
+            aria-label="back"
+            className="px-4 py-2 mt-5 text-base font-extrabold text-white rounded-md border transition-colors duration-300 cursor-pointer bg-primaryGreen hover:bg-white hover:border-primaryGreen hover:text-primaryGreen"
+            onClick={onClick}
+          >
+            Back
+          </button>
+          {/* </Link> */}
         </div>
       </main>
     </>

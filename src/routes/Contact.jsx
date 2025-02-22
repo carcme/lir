@@ -71,8 +71,8 @@ const Contact = () => {
             netlify="true"
             netlify-honeypot="bot-field"
           >
-            <div className="container flex mx-auto sm:px-5 sm:py-24">
-              <div className="flex relative z-10 flex-col p-4 mt-4 w-full rounded-lg shadow-md lg:w-1/3 md:w-1/2 bg-primaryGreen md:ml-auto md:mt-0">
+            <div className="container flex mx-auto sm:px-5 sm:py-10 lg:py-4">
+              <div className="flex relative z-10 flex-col p-4 my-6 w-full rounded-lg shadow-md lg:w-1/3 md:w-1/2 bg-primaryGreen md:ml-auto md:mt-0">
                 <h2 className="mb-1 text-lg font-medium text-white title-font">
                   {globalState.lang === "en" ? "Open Hours" : "TODO"}
                 </h2>

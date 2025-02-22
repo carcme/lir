@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import helmetData from "@/json/helmetData";
 import AllMenuItems from "../components/AllMenuItems";
@@ -14,12 +15,16 @@ const Menu = () => {
   const [isChecked, setIsChecked] = useState(false);
   const globalState = useContext(GlobalStateContext);
   const meta = getLanguage(globalState.lang, helmetData);
+  const location = useLocation();
+  console.log("🚀 ~ Menu ~ location:", location);
 
   const handleCheckboxChange = () => {
     setIsChecked(!isChecked);
   };
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if (location.pathname !== "/menu") {
+      window.scrollTo(0, 0);
+    }
   }, []);
   return (
     <>

@@ -51,10 +51,6 @@ export const getMenus = async () => {
       useLirMenuStore.setState({
         menu: data ? data.lirMenuItemCollection.items : [],
       });
-      console.log(
-        "🚀 ~ .Get Contentful ~ lir Menu items:",
-        data.lirMenuItemCollection.items
-      );
     })
     .catch((error) => {
       console.log("🚀 ~ getMenus ~ FAILED!!:", error);
