@@ -11,7 +11,15 @@ import {
 
 import navData from "../../data/navbarLinks";
 import Pdf from "/assets/pdf/Menu.pdf";
+
+import srcsetDirections from "/assets/directions2.webp?w=500;700;900;1200&as=srcset";
+import {
+  src as Directions,
+  width as wDirections,
+  height as hDirections,
+} from "/assets/directions2.webp?w=1200&as=metadata";
 import DirectionsImg from "/assets/directions2.webp";
+
 import {
   GlobalStateContext,
   getLanguage,
@@ -130,14 +138,16 @@ export const Footer = () => {
                     target="_blank"
                   >
                     <img
-                      src={DirectionsImg}
+                      src={Directions}
+                      srcSet={srcsetDirections}
+                      width={wDirections}
+                      height={hDirections}
+                      aria-label="directions to Us"
+                      loading="lazy"
                       alt="Map of directions to The Lir pub berlin"
                       className="rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
                     />
                   </Link>
-                  {/* replace hidden with flex  */}
-
-                  {/* add google map */}
                 </div>
               </div>
             </div>
