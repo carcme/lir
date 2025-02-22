@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { Spin as Hamburger } from "hamburger-react";
+import { Divide as Hamburger } from "hamburger-react";
 import { FaEnvelope } from "react-icons/fa";
 import { PiTelevisionSimpleBold } from "react-icons/pi";
 import Logo from "../../assets/logo/lirLogo.svg";
@@ -92,8 +92,9 @@ const Navbar = () => {
       {/* Mobile Navigation Icon */}
       <div className="block transition duration-700 ease-in-out md:hidden">
         <Hamburger
+          label="Open menu"
           toggled={isOpen}
-          arial-label="Open menu"
+          distance="lg"
           aria-expanded={isOpen}
           toggle={setOpen}
           color="#eee"
@@ -112,19 +113,19 @@ const Navbar = () => {
       >
         {/* Mobile Navigation Items */}
         {navbarTexts.map((item, index) => (
-          <NavLink
-            to={item.path}
-            aria-label={item.text}
-            key={index}
-            className={({ isActive }) =>
-              isActive ? " text-white " : "text-gray-400"
-            }
-            onClick={() => setOpen(false)}
-          >
-            <li className="z-50 p-4 border-b duration-300 cursor-pointer border-primaryGreen hover:border-gray-400 hover:font-extrabold hover:text-white">
+          <li className="z-50 p-4 border-b duration-300 cursor-pointer border-primaryGreen hover:border-gray-400 hover:font-extrabold hover:text-white">
+            <NavLink
+              to={item.path}
+              aria-label={item.text}
+              key={index}
+              className={({ isActive }) =>
+                isActive ? " text-white " : "text-gray-400"
+              }
+              onClick={() => setOpen(false)}
+            >
               {item.text}
-            </li>
-          </NavLink>
+            </NavLink>
+          </li>
         ))}
       </ul>
     </div>

@@ -104,7 +104,7 @@ const LirGridBento = ({ showHeader = false, data }) => {
                   height={item.image.height}
                   alt={item.name}
                   aria-label={item.name}
-                  loading="lazy"
+                  // loading="lazy"
                   className="object-cover w-full h-full rounded-lg"
                 />
               </picture>
