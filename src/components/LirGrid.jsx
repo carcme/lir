@@ -40,7 +40,8 @@ const LirGrid = ({ showHeader = false, data }) => {
               <img
                 className="object-cover w-full h-full rounded-xl shadow-lg transition-all duration-500 md:group-hover:scale-[1.02] hover:shadow-xl"
                 src={item.image}
-                alt={item.title}
+                alt={item.name}
+                aria-label={item.name}
                 loading="lazy"
                 onClick={() => isClicked(i)}
               />
@@ -64,6 +65,7 @@ const LirGrid = ({ showHeader = false, data }) => {
                 setIsOpen={setIsOpen}
                 data={dataItems[itemIndex]}
                 orientation="right"
+                aria-expanded={isOpen}
               ></LirDrawer>
             </div>
           );

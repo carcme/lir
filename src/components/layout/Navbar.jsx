@@ -62,10 +62,11 @@ const Navbar = () => {
       >
         <div className="items-end space-x-2 sm:space-x-6">
           <LangBtn clsName="z-50 cursor-pointer px-2" />
-          <Link to="/sports" aria-label="sports">
+          <Link to="/sports">
             <button
               tabIndex={-1}
               className="p-3 bg-transparent rounded-full border-2 transition duration-300 hover:bg-primaryGreenDark border-primaryGreenDark hover:cursor-pointer"
+              aria-label="sports"
             >
               <PiTelevisionSimpleBold size={16} color="#eee" />
             </button>

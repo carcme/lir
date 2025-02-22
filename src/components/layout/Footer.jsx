@@ -142,7 +142,7 @@ export const Footer = () => {
               </div>
             </div>
             <div className="bg-primaryGreen">
-              <div className="container flex flex-col items-center px-5 py-6 mx-auto text-sm text-gray-400">
+              <div className="container flex flex-col items-center px-5 py-6 mx-auto text-sm text-gray-300">
                 <Link
                   to="https://www.hammer3.com"
                   aria-label="hammer3.com"

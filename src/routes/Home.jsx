@@ -79,7 +79,7 @@ const Home = () => {
       >
         <LirGridBento showHeader={showHeader} data={data} />
         <div className="mx-10 h-px border-0 sm:mx-32 bg-white/20" />
-        <LirGrid showHeader={showHeader} data={data} />
+        {/* <LirGrid showHeader={showHeader} data={data} /> */}
       </div>
 
       {/* <div className="bg-primaryGreen">

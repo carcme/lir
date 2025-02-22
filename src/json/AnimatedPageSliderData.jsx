@@ -1,8 +1,42 @@
-import Relexed from "/assets/images/lir_relaxed_pub_garden.webp";
-import Glow from "/assets/images/lir_bar_warm_glow.webp";
-import Sports from "/assets/images/lir_outside_sports.webp";
-import Welcome from "/assets/images/lir_welcome.webp";
-import Warm from "/assets/images/lir_outside_warm.webp";
+import srcsetGlow from "/assets/images/lir_bar_warm_glow.webp?w=500;700;900;1200&as=srcset";
+import {
+  src as Glow,
+  width as wGlow,
+  height as hGlow,
+} from "/assets/images/lir_bar_warm_glow.webp?w=1200&as=metadata";
+// import Glow from "/assets/images/lir_bar_warm_glow.webp";
+
+import srcsetSports from "/assets/images/lir_outside_sports.webp?w=500;700;900;1200&as=srcset";
+import {
+  src as Sports,
+  width as wSports,
+  height as hSports,
+} from "/assets/images/lir_outside_sports.webp?w=1200&as=metadata";
+// import Sports from "/assets/images/lir_outside_sports.webp";
+
+import srcsetWelcome from "/assets/images/lir_welcome.webp?w=500;700;900;1200&as=srcset";
+import {
+  src as Welcome,
+  width as wWelcome,
+  height as hWelcome,
+} from "/assets/images/lir_welcome.webp?w=1200&as=metadata";
+// import Welcome from "/assets/images/lir_welcome.webp";
+
+import srcsetWarm from "/assets/images/lir_outside_warm.webp?w=500;700;900;1200&as=srcset";
+import {
+  src as Warm,
+  width as wWarm,
+  height as hWarm,
+} from "/assets/images/lir_outside_warm.webp?w=1200&as=metadata";
+// import Warm from "/assets/images/lir_outside_warm.webp";
+
+import srcsetRelexed from "/assets/images/lir_relaxed_pub_garden.webp?w=500;700;900;1200&as=srcset";
+import {
+  src as Relexed,
+  width as wRelexed,
+  height as hRelexed,
+} from "/assets/images/lir_relaxed_pub_garden.webp?w=1200&as=metadata";
+// import Relexed from "/assets/images/lir_relaxed_pub_garden.webp";
 
 const AnimatedPageSliderData = {
   en: [
@@ -10,7 +44,12 @@ const AnimatedPageSliderData = {
       id: 0,
       name: "Welcome to Lir - Your Perfect Night Out",
       tag: "Visit us today and experience the magic of The Lir",
-      image: Glow,
+      image: {
+        img: Glow,
+        width: wGlow,
+        height: hGlow,
+        srcset: srcsetGlow,
+      },
       url: "xs:bg-warmGlow",
       urlsm: "bg-warmGlowSm",
       desc: [
@@ -26,7 +65,12 @@ const AnimatedPageSliderData = {
       id: 1,
       name: "Hidden in the Heart of the City",
       tag: "Experience the 'Craic' in One of Berlin's Best",
-      image: Welcome,
+      image: {
+        img: Welcome,
+        width: wWelcome,
+        height: hWelcome,
+        srcset: srcsetWelcome,
+      },
       url: "xs:bg-welcome",
       urlsm: "bg-welcomeSm",
       desc: [
@@ -44,7 +88,12 @@ const AnimatedPageSliderData = {
       id: 2,
       name: "Atmosphere Meets Excellence",
       tag: "Join us and experience it for yourself",
-      image: Relexed,
+      image: {
+        img: Relexed,
+        width: wRelexed,
+        height: hRelexed,
+        srcset: srcsetRelexed,
+      },
       url: "xs:bg-relaxed",
       urlsm: "bg-relaxedSm",
       desc: [
@@ -60,7 +109,12 @@ const AnimatedPageSliderData = {
       id: 3,
       name: "Experience the Magic of Lir",
       tag: "Join us today and let the good times flow!",
-      image: Warm,
+      image: {
+        img: Warm,
+        width: wWarm,
+        height: hWarm,
+        srcset: srcsetWarm,
+      },
       url: "xs:bg-warmOutside",
       urlsm: "bg-warmOutsideSm",
 
@@ -77,7 +131,13 @@ const AnimatedPageSliderData = {
       id: 4,
       name: "Game On at The Lir",
       tag: "Don't just watch the game - feel the energy.",
-      image: Sports,
+      image: {
+        img: Sports,
+        width: wSports,
+        height: hSports,
+        srcset: srcsetSports,
+      },
+
       url: "xs:bg-sportsOutside",
       urlsm: "bg-sportsOutsideSm",
       desc: [
@@ -120,7 +180,12 @@ const AnimatedPageSliderData = {
       id: 0,
       name: "Willkommen im Lir - Ihr perfekter Abend",
       tag: "Besuchen Sie uns heute und erleben Sie den Zauber des Lir",
-      image: Glow,
+      image: {
+        img: Glow,
+        width: wGlow,
+        height: hGlow,
+        srcset: srcsetGlow,
+      },
       url: "xs:bg-warmGlow",
       urlsm: "bg-warmGlowSm",
       desc: [
@@ -136,7 +201,12 @@ const AnimatedPageSliderData = {
       id: 2,
       name: "Atmosphäre trifft auf Exzellenz",
       tag: "Kommen Sie zu uns und erleben Sie es selbst",
-      image: Relexed,
+      image: {
+        img: Relexed,
+        width: wRelexed,
+        height: hRelexed,
+        srcset: srcsetRelexed,
+      },
       url: "xs:bg-relaxed",
       urlsm: "bg-relaxedSm",
       desc: [
@@ -152,7 +222,12 @@ const AnimatedPageSliderData = {
       id: 1,
       name: "Versteckt im Herz der Stadt",
       tag: "Erleben Sie den „Craic“ in einer der besten Adressen Berlins",
-      image: Welcome,
+      image: {
+        img: Welcome,
+        width: wWelcome,
+        height: hWelcome,
+        srcset: srcsetWelcome,
+      },
       url: "xs:bg-welcome",
       urlsm: "bg-welcomeSm",
       desc: [
@@ -169,7 +244,12 @@ const AnimatedPageSliderData = {
       id: 3,
       name: "Erlebe die Magie von Lir",
       tag: "Kommen Sie heute und lassen Sie die gute Zeit beginnen!",
-      image: Warm,
+      image: {
+        img: Warm,
+        width: wWarm,
+        height: hWarm,
+        srcset: srcsetWarm,
+      },
       url: "xs:bg-warmOutside",
       urlsm: "bg-warmOutsideSm",
       desc: [
@@ -185,7 +265,12 @@ const AnimatedPageSliderData = {
       id: 4,
       name: "Game On at The Lir",
       tag: "Sieh dir das Spiel nicht nur an - spüre die Energie.",
-      image: Sports,
+      image: {
+        img: Sports,
+        width: wSports,
+        height: hSports,
+        srcset: srcsetSports,
+      },
       url: "xs:bg-sportsOutside",
       urlsm: "bg-sportsOutsideSm",
       desc: [

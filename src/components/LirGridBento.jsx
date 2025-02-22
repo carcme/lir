@@ -95,12 +95,19 @@ const LirGridBento = ({ showHeader = false, data }) => {
                     : "col-span-5 row-span-4"
                 }`}
             >
-              <img
-                src={item.image}
-                alt={item.name}
-                aria-label={item.name}
-                className="object-cover w-full h-full rounded-lg"
-              />
+              <picture>
+                <source srcset={item.image.srcSet} type="image/webp" />
+                <img
+                  src={item.image.img}
+                  srcSet={item.image.srcSet}
+                  width={item.image.width}
+                  height={item.image.height}
+                  alt={item.name}
+                  aria-label={item.name}
+                  loading="lazy"
+                  className="object-cover w-full h-full rounded-lg"
+                />
+              </picture>
               <BentoOverlay text={item} select={isClicked} />
               <LirDrawer
                 isOpen={isOpen}
