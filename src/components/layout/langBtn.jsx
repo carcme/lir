@@ -17,8 +17,16 @@ const LangBtn = ({ clsName }) => {
           globalDispatch({ type: "TOGGLE_LANG" });
         }}
       >
-        {globalState.lang === "de" && <span className="fi fi-gb fib"></span>}
-        {globalState.lang === "en" && <span className="fi fi-de fib"></span>}
+        {globalState.lang === "de" && (
+          <span>
+            <svg width={20} height={15} className="fi-de" />
+          </span>
+        )}
+        {globalState.lang === "en" && (
+          <span>
+            <svg width={20} height={15} className="fi-gb" />
+          </span>
+        )}
       </button>
     </>
   );

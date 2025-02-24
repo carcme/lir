@@ -1,15 +1,27 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { FaEuroSign } from "react-icons/fa";
 import { useLirMenuStore } from "../store";
+
+const filterMenus = (menus, slug) => {
+  return menus.filter((item) => item.slug === slug)[0];
+};
 
 const SinglePost = () => {
   const navigate = useNavigate();
   const { slug } = useParams();
   const allMenus = useLirMenuStore.getState().menu;
+
+  // const visibleTodos = useMemo(() => filterTodos(todos, tab), [todos, tab]);
+  console.time("filter menu");
+  const myMenu = useMemo(() => filterMenus(allMenus, slug), [slug]);
+  console.timeEnd("filter menu");
+
+  console.time("filter array");
   const [entry, setEntry] = useState(
     allMenus.filter((item) => item.slug === slug)[0]
   );
+  console.timeEnd("filter array");
 
   const onClick = () => {
     navigate(-1);

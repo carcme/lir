@@ -2,7 +2,8 @@ import React, { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Divide as Hamburger } from "hamburger-react";
 import { FaEnvelope } from "react-icons/fa";
-import { PiTelevisionSimpleBold } from "react-icons/pi";
+import { SiSky } from "react-icons/si";
+// import { PiTelevisionSimpleBold } from "react-icons/pi";
 import Logo from "../../assets/logo/lirLogo.svg";
 import navlinks from "../../data/navbarLinks";
 import useScrollPosition from "../../hooks/useScrollPosition";
@@ -68,7 +69,7 @@ const Navbar = () => {
               className="p-3 bg-transparent rounded-full border-2 transition duration-300 hover:bg-primaryGreenDark border-primaryGreenDark hover:cursor-pointer"
               aria-label="sports"
             >
-              <PiTelevisionSimpleBold size={16} color="#eee" />
+              <SiSky size={16} color="#eee" />
             </button>
           </Link>
 

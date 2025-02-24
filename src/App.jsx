@@ -8,6 +8,7 @@ import { getMenus } from "./lib/contentful";
 
 function App() {
   console.log("App");
+  // const { menus, isLoading, error, fetchMenus } = useLirMenuStore();
 
   useEffect(() => {
     getMenus();

@@ -12,12 +12,12 @@ import {
 import navData from "../../data/navbarLinks";
 import Pdf from "/assets/pdf/Menu.pdf";
 
-import srcsetDirections from "/assets/directions2.webp?w=500;700;900;1200&as=srcset";
+import srcsetDirections from "/assets/directions2.webp?w=300,500;700;900;1200&as=srcset";
 import {
   src as Directions,
   width as wDirections,
   height as hDirections,
-} from "/assets/directions2.webp?w=1200&as=metadata";
+} from "/assets/directions2.webp?w=300&as=metadata";
 import DirectionsImg from "/assets/directions2.webp";
 
 import {
@@ -137,16 +137,18 @@ export const Footer = () => {
                     to={"https://maps.app.goo.gl/AZEBrbXgjTQbpgFC7"}
                     target="_blank"
                   >
-                    <img
-                      src={Directions}
-                      srcSet={srcsetDirections}
-                      width={wDirections}
-                      height={hDirections}
-                      aria-label="directions to Us"
-                      loading="lazy"
-                      alt="Map of directions to The Lir pub berlin"
-                      className="rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
-                    />
+                    <picture>
+                      <source srcSet={srcsetDirections} type="image/webp" />
+                      <img
+                        src={Directions}
+                        width={wDirections}
+                        height={hDirections}
+                        aria-label="directions to Us"
+                        loading="lazy"
+                        alt="Map of directions to The Lir pub berlin"
+                        className="rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                      />
+                    </picture>
                   </Link>
                 </div>
               </div>

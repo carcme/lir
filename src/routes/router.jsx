@@ -5,7 +5,7 @@ import Home from "./Home";
 import Sports from "./Sports";
 import Contact from "./Contact";
 import Error from "./Error";
-const Temp = React.lazy(() => import("./Temp"));
+// const Temp = React.lazy(() => import("./Temp"));
 // import Temp from "";
 //const Menu = React.lazy(() => import("./Menu"));
 import Menu from "./Menu";
@@ -28,10 +28,10 @@ const router = createBrowserRouter([
         path: "/menu",
         element: <Menu />,
       },
-      {
-        path: "/temp",
-        element: <Temp />,
-      },
+      // {
+      //   path: "/temp",
+      //   element: <Temp />,
+      // },
       {
         path: "/sports",
         element: <Sports />,

@@ -87,16 +87,16 @@ const LirGridBento = ({ showHeader = false, data }) => {
                   index === 0
                     ? "col-span-4 row-span-4"
                     : index === 1
-                    ? "col-span-4 row-span-2"
-                    : index === 2
-                    ? "col-span-4 row-span-2"
-                    : index === 3
-                    ? "col-span-3 row-span-4"
-                    : "col-span-5 row-span-4"
+                      ? "col-span-4 row-span-2"
+                      : index === 2
+                        ? "col-span-4 row-span-2"
+                        : index === 3
+                          ? "col-span-3 row-span-4"
+                          : "col-span-5 row-span-4"
                 }`}
             >
               <picture>
-                <source srcset={item.image.srcSet} type="image/webp" />
+                <source srcSet={item.image.srcSet} type="image/webp" />
                 <img
                   src={item.image.img}
                   srcSet={item.image.srcSet}

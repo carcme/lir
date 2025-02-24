@@ -137,3 +137,11 @@ video::-webkit-media-controls {
     filter: sepia(0%);
   }
 }
+
+.fi-de {
+  background-image: url(./assets/flags/de.svg);
+}
+
+.fi-gb {
+  background-image: url(./assets/flags/gb.svg);
+}

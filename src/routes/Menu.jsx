@@ -16,7 +16,6 @@ const Menu = () => {
   const globalState = useContext(GlobalStateContext);
   const meta = getLanguage(globalState.lang, helmetData);
   const location = useLocation();
-  console.log("🚀 ~ Menu ~ location:", location);
 
   const handleCheckboxChange = () => {
     setIsChecked(!isChecked);
