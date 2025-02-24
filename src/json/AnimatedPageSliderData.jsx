@@ -1,17 +1,17 @@
 import srcsetGlow from "/assets/images/lir_bar_warm_glow.webp?w=300;500;700;900&as=srcset";
-import { img as Glow } from "/assets/images/lir_bar_warm_glow.webp?w=300&as=picture";
+import { img as Glow } from "/assets/images/lir_bar_warm_glow.webp?w=600&as=picture";
 
 import srcsetSports from "/assets/images/lir_outside_sports.webp?w=300;500;700;900&as=srcset";
-import { img as Sports } from "/assets/images/lir_outside_sports.webp?w=300&as=picture";
+import { img as Sports } from "/assets/images/lir_outside_sports.webp?w=600&as=picture";
 
 import srcsetWelcome from "/assets/images/lir_welcome.webp?w=300;500;700;900&as=srcset";
-import { img as Welcome } from "/assets/images/lir_welcome.webp?w=300&as=picture";
+import { img as Welcome } from "/assets/images/lir_welcome.webp?w=600&as=picture";
 
 import srcsetWarm from "/assets/images/lir_outside_warm.webp?w=300;500;700;900&as=srcset";
-import { img as Warm } from "/assets/images/lir_outside_warm.webp?w=300&as=picture";
+import { img as Warm } from "/assets/images/lir_outside_warm.webp?w=600&as=picture";
 
 import srcsetRelexed from "/assets/images/lir_relaxed_pub_garden.webp?w=300;500;700;900&as=srcset";
-import { img as Relexed } from "/assets/images/lir_relaxed_pub_garden.webp?w=300&as=picture";
+import { img as Relexed } from "/assets/images/lir_relaxed_pub_garden.webp?w=600&as=picture";
 
 const AnimatedPageSliderData = {
   en: [

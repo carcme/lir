@@ -59,7 +59,7 @@ const LirGridBento = ({ showHeader = false, data }) => {
                   className="object-cover w-full h-full rounded-lg"
                 />
               </picture>
-              {/* <BentoOverlay text={item} select={isClicked} /> */}
+              <BentoOverlay text={item} select={isClicked} />
               <LirDrawer
                 isOpen={isOpen}
                 setIsOpen={setIsOpen}

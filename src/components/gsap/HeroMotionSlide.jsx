@@ -42,11 +42,11 @@ const HeroMotionSlide = ({ endAction }) => {
             </motion.div>
           </div>
         </div>
-        <Rays
+        {/* <Rays
           castDirection="from-left"
           rayColor="white"
           className="top-0 z-30"
-        />
+        /> */}
       </div>
     </>
   );
