@@ -96,7 +96,7 @@ const Contact = () => {
                     Email
                     <input
                       id="email"
-                      tabindex="1"
+                      tabIndex="1"
                       type="email"
                       aria-required="true"
                       name="email"
@@ -115,14 +115,14 @@ const Contact = () => {
                       type="text"
                       name="message"
                       aria-required="true"
-                      tabindex="2"
+                      tabIndex="2"
                       className="px-3 py-1 w-full h-32 text-base leading-6 text-gray-700 bg-white rounded border transition-colors duration-200 ease-in-out outline-none resize-none border-primaryGreen focus:border-primaryGreen focus:ring-1 focus:ring-primaryGreen"
                     ></textarea>
                   </label>
                 </div>
                 <button
                   className="px-6 py-2 text-lg text-white rounded border border-white transition-colors duration-300 ease-in-out bg-primaryGreen focus:outline-none hover:bg-white hover:text-primaryGreen"
-                  tabindex="3"
+                  tabIndex="3"
                   type="submit"
                   aria-label="send"
                   // disabled="true"

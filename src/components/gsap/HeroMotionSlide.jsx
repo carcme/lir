@@ -1,12 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import Rays from "./Rays";
 
 const HeroMotionSlide = ({ endAction }) => {
-  const [hasRun, setHasRun] = useState(false);
-
-  // setHasRun(false);
-
   useEffect(() => {
     setTimeout(() => {
       endAction();
@@ -34,7 +30,6 @@ const HeroMotionSlide = ({ endAction }) => {
                 className="pl-5 text-6xl uppercase font-Hind text-primaryGreenDark"
               >
                 Berlin
-                {/* <GiShamrock className="text-3xl text-white" /> */}
               </motion.div>
             </div>
             <motion.div
@@ -52,10 +47,6 @@ const HeroMotionSlide = ({ endAction }) => {
           rayColor="white"
           className="top-0 z-30"
         />
-        {/* <div
-          id="mainContent"
-          className="flex justify-center items-center w-screen h-screen bg-black"
-        ></div> */}
       </div>
     </>
   );

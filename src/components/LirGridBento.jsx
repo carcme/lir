@@ -2,56 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import LirDrawer from "./LirDrawer";
 
 import { GlobalStateContext } from "../context/GlobalContextProvider";
-import { Link } from "react-router-dom";
 import BentoOverlay from "./bentoGrid/bentoOverlay";
-
-const blogs = [
-  {
-    id: 1,
-    title: "This is bento grid in vercel blog",
-    author: "Michael Jordan",
-    date: "12.10.1999",
-    image: "https://picsum.photos/seed/1/600/400",
-    avatar: "https://i.pravatar.cc/150?img=1",
-    link: "/",
-  },
-  {
-    id: 2,
-    title: "Exploring the Future of Web Development",
-    author: "Jane Doe",
-    date: "05.07.2023",
-    image: "https://picsum.photos/seed/2/600/400",
-    avatar: "https://i.pravatar.cc/150?img=2",
-    link: "/",
-  },
-  {
-    id: 3,
-    title: "How to Build Scalable Applications",
-    author: "John Smith",
-    date: "18.03.2021",
-    image: "https://picsum.photos/seed/3/600/400",
-    avatar: "https://i.pravatar.cc/150?img=3",
-    link: "/",
-  },
-  {
-    id: 4,
-    title: "Mastering React with Next.js",
-    author: "Alice Johnson",
-    date: "24.12.2022",
-    image: "https://picsum.photos/seed/9/600/400",
-    avatar: "https://i.pravatar.cc/150?img=4",
-    link: "/",
-  },
-  {
-    id: 5,
-    title: "Understanding TypeScript in 2024",
-    author: "Robert Brown",
-    date: "02.11.2024",
-    image: "https://picsum.photos/seed/5/600/400",
-    avatar: "https://i.pravatar.cc/150?img=5",
-    link: "/",
-  },
-];
 
 const LirGridBento = ({ showHeader = false, data }) => {
   const globalState = useContext(GlobalStateContext);
@@ -96,19 +47,19 @@ const LirGridBento = ({ showHeader = false, data }) => {
                 }`}
             >
               <picture>
-                <source srcSet={item.image.srcSet} type="image/webp" />
+                <source srcSet={item.image.srcset} type="image/webp" />
                 <img
-                  src={item.image.img}
-                  srcSet={item.image.srcSet}
-                  width={item.image.width}
-                  height={item.image.height}
+                  src={item.image.img.src}
+                  width={item.image.img.w}
+                  height={item.image.img.h}
+                  // srcSet={item.image.srcset}
                   alt={item.name}
                   aria-label={item.name}
                   // loading="lazy"
                   className="object-cover w-full h-full rounded-lg"
                 />
               </picture>
-              <BentoOverlay text={item} select={isClicked} />
+              {/* <BentoOverlay text={item} select={isClicked} /> */}
               <LirDrawer
                 isOpen={isOpen}
                 setIsOpen={setIsOpen}

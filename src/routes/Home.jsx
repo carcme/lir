@@ -62,7 +62,9 @@ const Home = () => {
         <meta name="google" content={meta.google} />
       </Helmet>
 
-      {globalState.welcome && <HeroMotionSlide endAction={welcomeFinished} />}
+      {!import.meta.env.DEV && globalState.welcome && (
+        <HeroMotionSlide endAction={welcomeFinished} />
+      )}
       {/* {globalState.welcome && <HeroTextSlideIn endAction={welcomeFinished} />} */}
 
       {/* this is hidden by the text color and4 the navbar */}

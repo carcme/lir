@@ -1,9 +1,7 @@
-const typographyPlugin = require("./src/styles/typography");
-
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-  plugins: [typographyPlugin],
+  plugins: [],
   theme: {
     extend: {
       fontFamily: {

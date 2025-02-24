@@ -13,15 +13,11 @@ const SinglePost = () => {
   const allMenus = useLirMenuStore.getState().menu;
 
   // const visibleTodos = useMemo(() => filterTodos(todos, tab), [todos, tab]);
-  console.time("filter menu");
-  const myMenu = useMemo(() => filterMenus(allMenus, slug), [slug]);
-  console.timeEnd("filter menu");
+  const entry = useMemo(() => filterMenus(allMenus, slug), [slug]);
 
-  console.time("filter array");
-  const [entry, setEntry] = useState(
-    allMenus.filter((item) => item.slug === slug)[0]
-  );
-  console.timeEnd("filter array");
+  // const [entry, setEntry] = useState(
+  //   allMenus.filter((item) => item.slug === slug)[0]
+  // );
 
   const onClick = () => {
     navigate(-1);
@@ -37,7 +33,6 @@ const SinglePost = () => {
         <div className="recipe-page animate-txtBlur">
           {/* hero */}
           <section className="grid gap-12 sm:grid-flow-col">
-            {/* TODO: return to menu location  */}
             <img
               src={entry.image.url}
               alt={
@@ -46,7 +41,7 @@ const SinglePost = () => {
                   : entry.image.description
               }
               title={entry.title}
-              className="h-[400px] w-full object-cover rounded-lg"
+              className="h-[400px] w-full object-cover rounded-xl "
               onClick={onClick}
             />
             <article className="flex flex-col justify-center">

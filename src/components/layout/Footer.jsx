@@ -12,13 +12,14 @@ import {
 import navData from "../../data/navbarLinks";
 import Pdf from "/assets/pdf/Menu.pdf";
 
-import srcsetDirections from "/assets/directions2.webp?w=300,500;700;900;1200&as=srcset";
-import {
-  src as Directions,
-  width as wDirections,
-  height as hDirections,
-} from "/assets/directions2.webp?w=300&as=metadata";
-import DirectionsImg from "/assets/directions2.webp";
+import srcsetDirections from "/assets/directions2.webp?w=200;300;400&as=srcset";
+// import {
+//   src as Directions,
+//   width as wDirections,
+//   height as hDirections,
+// } from "/assets/directions2.webp?w=200&format=webp&as=metadata";
+
+import { img as fallback } from "/assets/directions2.webp?w=400&as=picture";
 
 import {
   GlobalStateContext,
@@ -140,9 +141,9 @@ export const Footer = () => {
                     <picture>
                       <source srcSet={srcsetDirections} type="image/webp" />
                       <img
-                        src={Directions}
-                        width={wDirections}
-                        height={hDirections}
+                        src={fallback.src}
+                        width={fallback.w}
+                        height={fallback.h}
                         aria-label="directions to Us"
                         loading="lazy"
                         alt="Map of directions to The Lir pub berlin"

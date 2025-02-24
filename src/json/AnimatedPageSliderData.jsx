@@ -1,42 +1,17 @@
-import srcsetGlow from "/assets/images/lir_bar_warm_glow.webp?w=500;700;900;1200&as=srcset";
-import {
-  src as Glow,
-  width as wGlow,
-  height as hGlow,
-} from "/assets/images/lir_bar_warm_glow.webp?w=1200&as=metadata";
-// import Glow from "/assets/images/lir_bar_warm_glow.webp";
+import srcsetGlow from "/assets/images/lir_bar_warm_glow.webp?w=300;500;700;900&as=srcset";
+import { img as Glow } from "/assets/images/lir_bar_warm_glow.webp?w=300&as=picture";
 
-import srcsetSports from "/assets/images/lir_outside_sports.webp?w=500;700;900;1200&as=srcset";
-import {
-  src as Sports,
-  width as wSports,
-  height as hSports,
-} from "/assets/images/lir_outside_sports.webp?w=1200&as=metadata";
-// import Sports from "/assets/images/lir_outside_sports.webp";
+import srcsetSports from "/assets/images/lir_outside_sports.webp?w=300;500;700;900&as=srcset";
+import { img as Sports } from "/assets/images/lir_outside_sports.webp?w=300&as=picture";
 
-import srcsetWelcome from "/assets/images/lir_welcome.webp?w=500;700;900;1200&as=srcset";
-import {
-  src as Welcome,
-  width as wWelcome,
-  height as hWelcome,
-} from "/assets/images/lir_welcome.webp?w=1200&as=metadata";
-// import Welcome from "/assets/images/lir_welcome.webp";
+import srcsetWelcome from "/assets/images/lir_welcome.webp?w=300;500;700;900&as=srcset";
+import { img as Welcome } from "/assets/images/lir_welcome.webp?w=300&as=picture";
 
-import srcsetWarm from "/assets/images/lir_outside_warm.webp?w=500;700;900;1200&as=srcset";
-import {
-  src as Warm,
-  width as wWarm,
-  height as hWarm,
-} from "/assets/images/lir_outside_warm.webp?w=1200&as=metadata";
-// import Warm from "/assets/images/lir_outside_warm.webp";
+import srcsetWarm from "/assets/images/lir_outside_warm.webp?w=300;500;700;900&as=srcset";
+import { img as Warm } from "/assets/images/lir_outside_warm.webp?w=300&as=picture";
 
-import srcsetRelexed from "/assets/images/lir_relaxed_pub_garden.webp?w=500;700;900;1200&as=srcset";
-import {
-  src as Relexed,
-  width as wRelexed,
-  height as hRelexed,
-} from "/assets/images/lir_relaxed_pub_garden.webp?w=1200&as=metadata";
-// import Relexed from "/assets/images/lir_relaxed_pub_garden.webp";
+import srcsetRelexed from "/assets/images/lir_relaxed_pub_garden.webp?w=300;500;700;900&as=srcset";
+import { img as Relexed } from "/assets/images/lir_relaxed_pub_garden.webp?w=300&as=picture";
 
 const AnimatedPageSliderData = {
   en: [
@@ -46,8 +21,6 @@ const AnimatedPageSliderData = {
       tag: "Visit us today and experience the magic of The Lir",
       image: {
         img: Glow,
-        width: wGlow,
-        height: hGlow,
         srcset: srcsetGlow,
       },
       url: "xs:bg-warmGlow",
@@ -67,8 +40,6 @@ const AnimatedPageSliderData = {
       tag: "Experience the 'Craic' in One of Berlin's Best",
       image: {
         img: Welcome,
-        width: wWelcome,
-        height: hWelcome,
         srcset: srcsetWelcome,
       },
       url: "xs:bg-welcome",
@@ -90,8 +61,6 @@ const AnimatedPageSliderData = {
       tag: "Join us and experience it for yourself",
       image: {
         img: Relexed,
-        width: wRelexed,
-        height: hRelexed,
         srcset: srcsetRelexed,
       },
       url: "xs:bg-relaxed",
@@ -111,8 +80,6 @@ const AnimatedPageSliderData = {
       tag: "Join us today and let the good times flow!",
       image: {
         img: Warm,
-        width: wWarm,
-        height: hWarm,
         srcset: srcsetWarm,
       },
       url: "xs:bg-warmOutside",
@@ -133,8 +100,6 @@ const AnimatedPageSliderData = {
       tag: "Don't just watch the game - feel the energy.",
       image: {
         img: Sports,
-        width: wSports,
-        height: hSports,
         srcset: srcsetSports,
       },
 
@@ -182,8 +147,6 @@ const AnimatedPageSliderData = {
       tag: "Besuchen Sie uns heute und erleben Sie den Zauber des Lir",
       image: {
         img: Glow,
-        width: wGlow,
-        height: hGlow,
         srcset: srcsetGlow,
       },
       url: "xs:bg-warmGlow",
@@ -203,8 +166,6 @@ const AnimatedPageSliderData = {
       tag: "Kommen Sie zu uns und erleben Sie es selbst",
       image: {
         img: Relexed,
-        width: wRelexed,
-        height: hRelexed,
         srcset: srcsetRelexed,
       },
       url: "xs:bg-relaxed",
@@ -224,8 +185,6 @@ const AnimatedPageSliderData = {
       tag: "Erleben Sie den „Craic“ in einer der besten Adressen Berlins",
       image: {
         img: Welcome,
-        width: wWelcome,
-        height: hWelcome,
         srcset: srcsetWelcome,
       },
       url: "xs:bg-welcome",
@@ -246,8 +205,6 @@ const AnimatedPageSliderData = {
       tag: "Kommen Sie heute und lassen Sie die gute Zeit beginnen!",
       image: {
         img: Warm,
-        width: wWarm,
-        height: hWarm,
         srcset: srcsetWarm,
       },
       url: "xs:bg-warmOutside",
@@ -267,8 +224,6 @@ const AnimatedPageSliderData = {
       tag: "Sieh dir das Spiel nicht nur an - spüre die Energie.",
       image: {
         img: Sports,
-        width: wSports,
-        height: hSports,
         srcset: srcsetSports,
       },
       url: "xs:bg-sportsOutside",

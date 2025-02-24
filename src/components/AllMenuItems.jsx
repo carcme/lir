@@ -5,15 +5,9 @@ import { useLirMenuStore } from "../store";
 const AllMenuItems = () => {
   const [foodItems, setFoodItems] = useState([]);
   const [drinksItems, setDrinksItems] = useState([]);
-  // const [menus, setMenus] = useState(useLirMenuStore.getState().menu);
-
-  const { menus, isLoading, error, fetchMenus } = useLirMenuStore();
-  console.log("🚀 ~ AllMenuItems ~ menus:", menus);
+  const [menus, setMenus] = useState(useLirMenuStore.getState().menu);
 
   useEffect(() => {
-    fetchMenus();
-
-    const menus = useLirMenuStore.getState().menu;
     if (menus) {
       setFoodItems(menus.filter((item) => item.tags[0] === "food"));
       setDrinksItems(menus.filter((item) => item.tags[0] === "drink"));
