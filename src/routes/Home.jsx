@@ -9,9 +9,9 @@ import {
   getLanguage,
 } from "../context/GlobalContextProvider";
 
-import LirGrid from "../components/LirGrid";
 import HeroMotionSlide from "../components/gsap/HeroMotionSlide";
 import LirGridBento from "../components/LirGridBento";
+import LirHelmet from "../components/layout/LirHelmet";
 
 const Home = () => {
   const globalDispatch = useContext(GlobalDispatchContext);
@@ -38,30 +38,11 @@ const Home = () => {
   }, [globalState.welcome]);
   return (
     <>
-      <Helmet htmlAttributes={{ lang: globalState.lang }}>
-        <title>{meta.titleHome}</title>
-        <meta name="description" content={meta.descHome} />
-        <meta name="keywords" content={meta.keysHomeuseScroll} />
-        <meta name="robots" content={meta.robots} />
-        <meta name="charSet" content={meta.charset} />
-
-        <meta name="og:image" content={meta.og.image} />
-        <meta name="og:image:url" content={meta.og.imageUrl} />
-        <meta name="og:image:width" content={meta.og.imageWidth} />
-        <meta name="og:image:height" content={meta.og.imageHeight} />
-        <meta name="og:image:alt" content={meta.og.imageAlt} />
-        <meta name="og:description" content={meta.descHome} />
-        <meta name="og:title" content={meta.og.title} />
-        <meta name="og:site_name" content={meta.og.siteName} />
-
-        <meta name="charSet" content={meta.charset} />
-        <meta name="charSet" content={meta.charset} />
-        <meta name="charSet" content={meta.charset} />
-
-        <meta name="apple-mobile-web-app-capable" content={meta.apple} />
-        <meta name="google" content={meta.google} />
-      </Helmet>
-
+      <LirHelmet
+        lang={globalState.lang}
+        page={meta.home}
+        common={meta.common}
+      />
       {!import.meta.env.DEV && globalState.welcome && (
         <HeroMotionSlide endAction={welcomeFinished} />
       )}
@@ -81,22 +62,7 @@ const Home = () => {
       >
         <LirGridBento showHeader={showHeader} data={data} />
         <div className="mx-10 h-px border-0 sm:mx-32 bg-white/20" />
-        {/* <LirGrid showHeader={showHeader} data={data} /> */}
       </div>
-
-      {/* <div className="bg-primaryGreen">
-        <div className="justify-center items-center p-4 mx-auto max-w-xl rounded-lg shadow-lg"> */}
-      {/* <Carousel
-            children={slides}
-            autoSlide={false}
-            autoSlideInterval={8000}
-          >
-            {slides.map((slide) => (
-              <img src={slide} alt="slide" className="object-cover" />
-            ))}
-          </Carousel> */}
-      {/* </div>
-      </div> */}
     </>
   );
 };

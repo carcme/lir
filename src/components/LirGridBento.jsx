@@ -27,7 +27,6 @@ const LirGridBento = ({ showHeader = false, data }) => {
 
   return (
     <div className="mx-auto w-full max-w-7xl md:h-full">
-      <p className="py-2 text-2xl text-white">Bento Grid Example</p>
       <div className="flex justify-center items-center pb-10 w-full md:h-full md:min-h-screen bg-primaryGreen">
         <div className="flex flex-col gap-4 w-full md:max-h-96 md:min-h-screen md:h-full md:grid md:grid-cols-8 md:grid-rows-8">
           {dataItems.map((item, index) => (

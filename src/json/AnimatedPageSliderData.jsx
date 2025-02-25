@@ -229,7 +229,7 @@ const AnimatedPageSliderData = {
       url: "xs:bg-sportsOutside",
       urlsm: "bg-sportsOutsideSm",
       desc: [
-        "Erlebe die elektrisierende Atmosphäre in [Name deiner Bar], wo Sport, tolle Drinks und ein unschlagbares Publikum zusammenkommen. Ob Fußball, Basketball oder die größten internationalen Spiele, verfolge die Action live auf unseren großen Bildschirmen und genieße dabei eiskalte Biere und leckere Häppchen.",
+        "Erlebe die elektrisierende Atmosphäre in The Lir, wo Sport, tolle Drinks und ein unschlagbares Publikum zusammenkommen. Ob Fußball, Basketball oder die größten internationalen Spiele, verfolge die Action live auf unseren großen Bildschirmen und genieße dabei eiskalte Biere und leckere Häppchen.",
         "Mit vielen Sitzgelegenheiten im Freien, lebhaften Fans und einer unvergleichlichen Atmosphäre am Spieltag ist dies der Ort zum Jubeln, Feiern und Erleben jedes spannenden Moments.",
       ],
       btn1: "Sporttermine",

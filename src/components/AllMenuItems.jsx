@@ -1,18 +1,35 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import ItemGrid from "./ItemGrid";
 import { useLirMenuStore } from "../store";
 
+import { GlobalStateContext } from "../context/GlobalContextProvider";
+
 const AllMenuItems = () => {
+  const globalState = useContext(GlobalStateContext);
+
   const [foodItems, setFoodItems] = useState([]);
   const [drinksItems, setDrinksItems] = useState([]);
-  const [menus, setMenus] = useState(useLirMenuStore.getState().menu);
+  const [menusEN, setMenusEN] = useState(
+    useLirMenuStore((state) => state.menuEN)
+  );
+  const [menusDE, setMenusDE] = useState(
+    useLirMenuStore((state) => state.menuDE)
+  );
 
   useEffect(() => {
-    if (menus) {
-      setFoodItems(menus.filter((item) => item.tags[0] === "food"));
-      setDrinksItems(menus.filter((item) => item.tags[0] === "drink"));
+    switch (globalState.lang) {
+      case "en": {
+        setFoodItems(menusEN.filter((item) => item.tags[0] === "food"));
+        setDrinksItems(menusEN.filter((item) => item.tags[0] === "drink"));
+        break;
+      }
+      case "de": {
+        setFoodItems(menusDE.filter((item) => item.tags[0] === "food"));
+        setDrinksItems(menusDE.filter((item) => item.tags[0] === "drink"));
+        break;
+      }
     }
-  }, []);
+  }, [globalState.lang]);
 
   return (
     <div className="animate-txtBlur">

@@ -1,23 +1,22 @@
-import { useState, useEffect, useMemo } from "react";
+import { useEffect, useMemo, useContext } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { FaEuroSign } from "react-icons/fa";
 import { useLirMenuStore } from "../store";
+
+import { GlobalStateContext } from "../context/GlobalContextProvider";
 
 const filterMenus = (menus, slug) => {
   return menus.filter((item) => item.slug === slug)[0];
 };
 
 const SinglePost = () => {
+  const globalState = useContext(GlobalStateContext);
   const navigate = useNavigate();
   const { slug } = useParams();
-  const allMenus = useLirMenuStore.getState().menu;
+  const menuEn = useLirMenuStore.getState().menuEN;
+  const menuDE = useLirMenuStore.getState().menuDE;
 
-  // const visibleTodos = useMemo(() => filterTodos(todos, tab), [todos, tab]);
-  const entry = useMemo(() => filterMenus(allMenus, slug), [slug]);
-
-  // const [entry, setEntry] = useState(
-  //   allMenus.filter((item) => item.slug === slug)[0]
-  // );
+  const entry = filterMenus(globalState.lang === "en" ? menuEn : menuDE, slug);
 
   const onClick = () => {
     navigate(-1);

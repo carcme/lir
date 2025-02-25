@@ -8,6 +8,8 @@ export const useLirMenuStore = create()(
   persist(
     (set, get) => ({
       menus: [],
+      menusDE: [],
+      menuEN: [],
       isLoading: false,
       error: null,
 

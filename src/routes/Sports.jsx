@@ -1,5 +1,4 @@
 import React, { useContext, useEffect } from "react";
-import { Helmet } from "react-helmet-async";
 import helmetData from "@/json/helmetData";
 import { Link } from "react-router-dom";
 import SportsSchedule from "../components/SportsSchedule";
@@ -8,6 +7,7 @@ import {
   GlobalStateContext,
   getLanguage,
 } from "../context/GlobalContextProvider";
+import LirHelmet from "../components/layout/LirHelmet";
 
 const Sports = () => {
   const globalState = useContext(GlobalStateContext);
@@ -19,29 +19,12 @@ const Sports = () => {
 
   return (
     <>
-      <Helmet htmlAttributes={{ lang: globalState.lang }}>
-        <title>{meta.titleSports}</title>
-        <meta name="description" content={meta.descSports} />
-        <meta name="keywords" content={meta.keysSports} />
-        <meta name="robots" content={meta.robots} />
-        <meta name="charSet" content={meta.charset} />
+      <LirHelmet
+        lang={globalState.lang}
+        page={meta.sports}
+        common={meta.common}
+      />
 
-        <meta name="og:image" content={meta.og.image} />
-        <meta name="og:image:url" content={meta.og.imageUrl} />
-        <meta name="og:image:width" content={meta.og.imageWidth} />
-        <meta name="og:image:height" content={meta.og.imageHeight} />
-        <meta name="og:image:alt" content={meta.og.imageAlt} />
-        <meta name="og:description" content={meta.descHome} />
-        <meta name="og:title" content={meta.og.title} />
-        <meta name="og:site_name" content={meta.og.siteName} />
-
-        <meta name="charSet" content={meta.charset} />
-        <meta name="charSet" content={meta.charset} />
-        <meta name="charSet" content={meta.charset} />
-
-        <meta name="apple-mobile-web-app-capable" content={meta.apple} />
-        <meta name="google" content={meta.google} />
-      </Helmet>
       <div className="flex flex-col justify-center items-center px-4 pt-28 pb-16 w-full font-bold text-center text-white h-fit sm:text-3xl bg-primaryGreen">
         {globalState.lang === "en" && (
           <p className="py-5 max-w-2xl text-justify">

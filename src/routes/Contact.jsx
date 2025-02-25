@@ -1,11 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Helmet } from "react-helmet-async";
 import helmetData from "@/json/helmetData";
 
 import {
   GlobalStateContext,
   getLanguage,
 } from "../context/GlobalContextProvider";
+import LirHelmet from "../components/layout/LirHelmet";
 
 const Contact = () => {
   const [mapLoaded, setMapLoaded] = useState(false);
@@ -20,29 +20,11 @@ const Contact = () => {
   }, []);
   return (
     <>
-      <Helmet htmlAttributes={{ lang: globalState.lang }}>
-        <title>{meta.titleContact}</title>
-        <meta name="description" content={meta.descContact} />
-        <meta name="keywords" content={meta.keysContact} />
-        <meta name="robots" content={meta.robots} />
-        <meta name="charSet" content={meta.charset} />
-
-        <meta name="og:image" content={meta.og.image} />
-        <meta name="og:image:url" content={meta.og.imageUrl} />
-        <meta name="og:image:width" content={meta.og.imageWidth} />
-        <meta name="og:image:height" content={meta.og.imageHeight} />
-        <meta name="og:image:alt" content={meta.og.imageAlt} />
-        <meta name="og:description" content={meta.descHome} />
-        <meta name="og:title" content={meta.og.title} />
-        <meta name="og:site_name" content={meta.og.siteName} />
-
-        <meta name="charSet" content={meta.charset} />
-        <meta name="charSet" content={meta.charset} />
-        <meta name="charSet" content={meta.charset} />
-
-        <meta name="apple-mobile-web-app-capable" content={meta.apple} />
-        <meta name="google" content={meta.google} />
-      </Helmet>
+      <LirHelmet
+        lang={globalState.lang}
+        page={meta.contact}
+        common={meta.common}
+      />
       <div className="page">
         <section className="relative text-primaryGreen body-font">
           <div className="relative bg-white sm:absolute sm:inset-0">
@@ -74,7 +56,7 @@ const Contact = () => {
             <div className="container flex mx-auto sm:px-5 sm:py-10 lg:py-4">
               <div className="flex relative z-10 flex-col p-4 my-6 w-full rounded-lg shadow-md lg:w-1/3 md:w-1/2 bg-primaryGreen md:ml-auto md:mt-0">
                 <h2 className="mb-1 text-lg font-medium text-white title-font">
-                  {globalState.lang === "en" ? "Open Hours" : "TODO"}
+                  {globalState.lang === "en" ? "Open Hours" : "Offene Zeiten"}
                 </h2>
                 <p className="text-sm leading-relaxed text-white">
                   Tuesday – Thursday: 16:30 – 00:00

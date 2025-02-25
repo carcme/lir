@@ -17,12 +17,12 @@ const LangBtn = ({ clsName }) => {
           globalDispatch({ type: "TOGGLE_LANG" });
         }}
       >
-        {globalState.lang === "de" && (
+        {globalState.lang === "en" && (
           <span>
             <svg width={20} height={15} className="fi-de" />
           </span>
         )}
-        {globalState.lang === "en" && (
+        {globalState.lang === "de" && (
           <span>
             <svg width={20} height={15} className="fi-gb" />
           </span>

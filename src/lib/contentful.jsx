@@ -9,27 +9,42 @@ const myaccessToken = import.meta.env.VITE_CONTENTFUL_ACCESS_TOKEN;
 export const getMenus = async () => {
   const query = `
     {
-      lirMenuItemCollection {
-        items {
-          title
-          desc
-          blockText
-          image {
-            url
-            description
-            width
-            height
-          }
-          featured
-          slug
-          tags
-          price 
-        }
+  en: lirMenuItemCollection(locale: "en") {
+    items {
+      title
+      desc
+      blockText
+      image {
+        url
+        description
+        width
+        height
       }
+      featured
+      slug
+      tags
+      price
     }
+  }
+  de: lirMenuItemCollection(locale: "de") {
+    items {
+      title
+      desc
+      blockText
+      image {
+        url
+        description
+        width
+        height
+      }
+      featured
+      slug
+      tags
+      price
+    }
+  }
+}
     `;
-  const accessToken =
-    "e448ca0c6ff57f7f20b50928909200db225d6ef7645acb99f41a315d0b20beb1";
 
   fetch(
     `https://graphql.contentful.com/content/v1/spaces/${mySpaceId}/environments/master`,
@@ -44,12 +59,17 @@ export const getMenus = async () => {
       }),
     }
   )
-    .then((res) => res.json())
+    .then((res) => {
+      return res.json();
+    })
     .then((response) => {
       const { data } = response;
 
       useLirMenuStore.setState({
-        menu: data ? data.lirMenuItemCollection.items : [],
+        menuEN: data ? data.en.items : [],
+      });
+      useLirMenuStore.setState({
+        menuDE: data ? data.de.items : [],
       });
     })
     .catch((error) => {

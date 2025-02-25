@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import { useLocation } from "react-router-dom";
 import helmetData from "@/json/helmetData";
 import AllMenuItems from "../components/AllMenuItems";
 // const Pdf = React.lazy(() => import("../components/Pdf"));
@@ -10,6 +9,7 @@ import {
   GlobalStateContext,
   getLanguage,
 } from "../context/GlobalContextProvider";
+import LirHelmet from "../components/layout/LirHelmet";
 
 const Menu = () => {
   const [isChecked, setIsChecked] = useState(false);
@@ -27,29 +27,11 @@ const Menu = () => {
   }, []);
   return (
     <>
-      <Helmet htmlAttributes={{ lang: globalState.lang }}>
-        <title>{meta.titleMenu}</title>
-        <meta name="description" content={meta.descMenu} />
-        <meta name="keywords" content={meta.keysMenu} />
-        <meta name="robots" content={meta.robots} />
-        <meta name="charSet" content={meta.charset} />
-
-        <meta name="og:image" content={meta.og.image} />
-        <meta name="og:image:url" content={meta.og.imageUrl} />
-        <meta name="og:image:width" content={meta.og.imageWidth} />
-        <meta name="og:image:height" content={meta.og.imageHeight} />
-        <meta name="og:image:alt" content={meta.og.imageAlt} />
-        <meta name="og:description" content={meta.descHome} />
-        <meta name="og:title" content={meta.og.title} />
-        <meta name="og:site_name" content={meta.og.siteName} />
-
-        <meta name="charSet" content={meta.charset} />
-        <meta name="charSet" content={meta.charset} />
-        <meta name="charSet" content={meta.charset} />
-
-        <meta name="apple-mobile-web-app-capable" content={meta.apple} />
-        <meta name="google" content={meta.google} />
-      </Helmet>
+      <LirHelmet
+        lang={globalState.lang}
+        page={meta.menu}
+        common={meta.common}
+      />
       <div className="page">
         <AllMenuItems />
 
@@ -68,7 +50,7 @@ const Menu = () => {
             className="text-sm font-medium ms-3 text-primaryGreen"
           >
             {globalState.lang === "en" && "Show Menu"}
-            {globalState.lang === "de" && "TODO: DE lang"}
+            {globalState.lang === "de" && "Menü anzeigen"}
           </span>
         </label>
 
