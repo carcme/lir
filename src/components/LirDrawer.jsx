@@ -24,7 +24,7 @@ const LirDrawer = ({ isOpen, setIsOpen, data, orientation = "right" }) => {
     <>
       <main
         className={
-          "fixed mx-auto overflow-hidden z-10 inset-0 transform ease-in-out" +
+          "fixed mx-auto overflow-hidden z-20 inset-0 transform ease-in-out" +
           (isOpen
             ? " transition-opacity opacity-100 duration-500 translate-x-0  "
             : " transition-all delay-500 opacity-0 translate-x-full  ") +
