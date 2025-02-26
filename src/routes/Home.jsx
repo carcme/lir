@@ -43,9 +43,10 @@ const Home = () => {
         page={meta.home}
         common={meta.common}
       />
-      {!import.meta.env.DEV && globalState.welcome && (
-        <HeroMotionSlide endAction={welcomeFinished} />
-      )}
+      {
+        // !import.meta.env.DEV &&
+        globalState.welcome && <HeroMotionSlide endAction={welcomeFinished} />
+      }
       {/* {globalState.welcome && <HeroTextSlideIn endAction={welcomeFinished} />} */}
 
       {/* this is hidden by the text color and4 the navbar */}
@@ -61,7 +62,7 @@ const Home = () => {
         }`}
       >
         <LirGridBento showHeader={showHeader} data={data} />
-        <div className="mx-10 h-px border-0 sm:mx-32 bg-white/20" />
+        <div className="h-px mx-10 border-0 sm:mx-32 bg-white/20" />
       </div>
     </>
   );

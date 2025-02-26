@@ -27,7 +27,7 @@ const Rays = ({
   className,
   rayColor = "white",
   rayWidth,
-  blurAmount = "8px",
+  blurAmount = "28px",
   castDirection = "from-left",
   animationDuration = 2,
   animationDelay = 0.5,
@@ -50,8 +50,8 @@ const Rays = ({
     castDirection === "from-left"
       ? -45
       : castDirection === "from-center"
-      ? 0
-      : 45;
+        ? 0
+        : 45;
 
   const containerVariants = {
     hidden: {},

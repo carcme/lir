@@ -69,13 +69,13 @@ video::-webkit-media-controls {
 }
 
 .has-tooltip:hover .tooltip {
-  @apply visible z-50;
+  @apply z-50 visible;
 }
 
 /* ##### AnimatedPageSlider ####### */
 
 .carousel {
-  @apply overflow-hidden relative w-screen h-screen;
+  @apply relative w-screen h-screen overflow-hidden;
 }
 /* h-[150px] w-[150px]  */
 .carousel .list .carouselitem {
@@ -84,7 +84,7 @@ video::-webkit-media-controls {
 
 .carousel .list .carouselitem:nth-child(1),
 .carousel .list .carouselitem:nth-child(2) {
-  @apply top-0 left-0 w-full h-full rounded-none translate-x-0 translate-y-0;
+  @apply top-0 left-0 w-full h-full translate-x-0 translate-y-0 rounded-none;
 }
 .carousel .list .carouselitem:nth-child(3) {
   @apply left-[-47%] xs:left-[67%];
