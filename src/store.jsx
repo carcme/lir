@@ -1,3 +1,4 @@
+import { filter } from "motion/react-client";
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
 
@@ -10,19 +11,9 @@ export const useLirMenuStore = create()(
       menus: [],
       menusDE: [],
       menuEN: [],
+      lirDocs: [],
       isLoading: false,
       error: null,
-
-      setMenus: () => set((state) => ({ menus: state.menus })),
-
-      getBySlug: (slug) => {
-        get((state) => ({
-          slug: {
-            ...state.slug,
-            slug: [...state.user.slug, slug],
-          },
-        }));
-      },
 
       //   fetchMenus: async () => {
       //     set({ isLoading: true, error: null });

@@ -10,7 +10,7 @@ import {
 } from "../assets/images/Lir6.webp?w=300&as=metadata";
 
 import lirFire from "../assets/lirFire.mp4";
-import Rays from "../components/gsap/Rays";
+import Rays from "../components/hero/Rays";
 
 const Temp = () => {
   const [isDesktop, setDesktop] = useState(window.innerWidth > 1000);
@@ -28,7 +28,7 @@ const Temp = () => {
 
   return (
     <>
-      <header className="flex overflow-hidden relative justify-center items-center mb-12 h-screen bg-primaryGreen">
+      <header className="relative flex items-center justify-center h-screen mb-12 overflow-hidden bg-primaryGreen">
         <div className="relative z-30 p-5 text-2xl text-white rounded-xl bg-primaryGreenDark/80">
           Welcome to The Lir
         </div>
@@ -45,12 +45,12 @@ const Temp = () => {
       </header>
 
       <div className="w-full h-screen bg-primaryGreen">
-        <main className="overflow-hidden relative px-4 py-36 mx-auto w-full h-full">
+        <main className="relative w-full h-full px-4 mx-auto overflow-hidden py-36">
           <h1 className="text-4xl font-bold tracking-tight text-center text-transparent capitalize bg-clip-text bg-gradient-to-t from-white md:text-5xl lg:text-7xl via-neutral-400 to-neutral-600">
             Add a ray of sunshine <br />
             or some shite
           </h1>
-          <h2 className="px-4 mx-auto my-4 mt-4 max-w-2xl text-base font-normal text-justify text-muted-foreground md:mt-4 md:text-lg">
+          <h2 className="max-w-2xl px-4 mx-auto my-4 mt-4 text-base font-normal text-justify text-muted-foreground md:mt-4 md:text-lg">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
             dignissimos tenetur adipisci dolores dolorem ducimus exercitationem?
             Mollitia laboriosam est ducimus inventore nobis, quisquam, quae quos
@@ -76,19 +76,13 @@ const Temp = () => {
         </picture>
         <p>Image resized to 300px</p>
 
-        {/* <div>
+        <div>
           {isDesktop ? (
             <div className="text-4xl text-red-700">Larger than 1000px</div>
           ) : (
             <div className="text-4xl text-blue-700">Lower than 1000px </div>
           )}
-        </div> */}
-        {/* <HeroTextSlideIn />
-        <ImagesPage /> */}
-        {/* <LirGrid data={data} /> */}
-        {/* <MyHeroSlider /> */}
-        {/* <TDSlider />
-        <FullScrn /> */}
+        </div>
       </div>
     </>
   );

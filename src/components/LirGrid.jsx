@@ -15,7 +15,6 @@ const LirGrid = ({ showHeader = false, data }) => {
     setIsOpen(true);
   };
   const title = dataItems[itemIndex];
-  console.log("🚀 ~ LirGrid ~ title:", title);
   useEffect(() => {
     setDataItems(data);
   }, [globalState.lang]);
@@ -50,7 +49,7 @@ const LirGrid = ({ showHeader = false, data }) => {
                 onClick={() => isClicked(i)}
               />
               <div
-                className="overflow-hidden absolute bottom-2 left-2 justify-start w-full text-white sm:bottom-3 sm:left-3"
+                className="absolute justify-start w-full overflow-hidden text-white bottom-2 left-2 sm:bottom-3 sm:left-3"
                 onClick={() => isClicked(i)}
               >
                 <h2 className="pr-5 text-2xl font-bold leading-tight truncate text-white/70">

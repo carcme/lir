@@ -43,6 +43,15 @@ export const getMenus = async () => {
       price
     }
   }
+  lirDocsCollection{
+    items{
+      type
+      doc {
+        title
+        url
+      }
+    }
+  }
 }
     `;
 
@@ -65,11 +74,17 @@ export const getMenus = async () => {
     .then((response) => {
       const { data } = response;
 
+      // get en lang items
       useLirMenuStore.setState({
         menuEN: data ? data.en.items : [],
       });
+      // get de lang items
       useLirMenuStore.setState({
         menuDE: data ? data.de.items : [],
+      });
+      // get documents items
+      useLirMenuStore.setState({
+        lirDocs: data ? data.lirDocsCollection.items : [],
       });
     })
     .catch((error) => {

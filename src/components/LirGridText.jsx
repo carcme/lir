@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const LirGridText = ({
   orientation,
@@ -20,7 +20,7 @@ const LirGridText = ({
             : ""
         }`}
       >
-        <div className="flex flex-col justify-center items-center w-full max-w-5xl text-center text-white">
+        <div className="flex flex-col items-center justify-center w-full max-w-5xl text-center text-white">
           <div
             className={`pt-5 text-2xl font-bold uppercase lg:text-5xl lg:pb-4`}
           >
@@ -34,8 +34,8 @@ const LirGridText = ({
                   orientation === "right" && desc.length > 2
                     ? "sm:pl-24"
                     : orientation === "right" && desc.length <= 2
-                    ? "sm:pl-20"
-                    : ""
+                      ? "sm:pl-20"
+                      : ""
                 }`}
                 // style={{ marginLeft: (i + 1) * 38 + "px" }}
                 key={i}
@@ -56,7 +56,8 @@ const LirGridText = ({
           {btn1Link?.length > 0 && (
             <Link
               to={btn1Link}
-              className="inline-block px-4 py-2 mx-1 text-sm font-semibold text-center text-white rounded-lg ring-1 ring-white transition duration-100 bg-primaryGreen xs:py-3 hover:bg-primaryGreenDark focus-visible:ring active:bg-accentDecoration md:text-base"
+              state={"home"}
+              className="inline-block px-4 py-2 mx-1 text-sm font-semibold text-center text-white transition duration-100 rounded-lg ring-1 ring-white bg-primaryGreen xs:py-3 hover:bg-primaryGreenDark focus-visible:ring active:bg-accentDecoration md:text-base"
               aria-label={btn1}
             >
               {btn1}
@@ -65,8 +66,9 @@ const LirGridText = ({
           {btn2Link?.length > 0 && (
             <Link
               to={btn2Link}
+              state={"home"}
               aria-label={btn2}
-              className="inline-block px-4 py-2 mx-1 text-sm font-semibold text-center bg-white rounded-lg ring-1 ring-white transition duration-100 xs:py-3 text-primaryGreen hover:bg-primaryGreen hover:text-white focus-visible:ring active:text-primaryGreen md:text-base bg-black/50"
+              className="inline-block px-4 py-2 mx-1 text-sm font-semibold text-center transition duration-100 bg-white rounded-lg ring-1 ring-white xs:py-3 text-primaryGreen hover:bg-primaryGreen hover:text-white focus-visible:ring active:text-primaryGreen md:text-base bg-black/50"
             >
               {btn2}
             </Link>

@@ -10,6 +10,7 @@ import {
   getLanguage,
 } from "../context/GlobalContextProvider";
 import LirHelmet from "../components/layout/LirHelmet";
+import { useLirMenuStore } from "../store";
 
 const Menu = () => {
   const [isChecked, setIsChecked] = useState(false);
@@ -17,11 +18,15 @@ const Menu = () => {
   const meta = getLanguage(globalState.lang, helmetData);
   const location = useLocation();
 
+  const menuDoc = useLirMenuStore
+    .getState()
+    .lirDocs.find((doc) => doc.type === "menu");
+
   const handleCheckboxChange = () => {
     setIsChecked(!isChecked);
   };
   useEffect(() => {
-    if (location.pathname !== "/menu") {
+    if (location.state !== "/menu") {
       window.scrollTo(0, 0);
     }
   }, []);
@@ -35,7 +40,7 @@ const Menu = () => {
       <div className="page">
         <AllMenuItems />
 
-        <label className="flex justify-center items-center my-10 cursor-pointer select-none">
+        <label className="flex items-center justify-center my-10 cursor-pointer select-none">
           <input
             type="checkbox"
             checked={isChecked}
@@ -54,7 +59,7 @@ const Menu = () => {
           </span>
         </label>
 
-        {isChecked && <Pdf />}
+        {isChecked && <Pdf url={menuDoc.doc.url} />}
       </div>
     </>
   );

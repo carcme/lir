@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-const Home = () => {
+const Error = () => {
   console.log("Error page");
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -8,9 +8,9 @@ const Home = () => {
   return (
     <>
       <div className="py-6 pt-20 bg-white lg:pt-28 lg:py-12">
-        <div className="px-4 mx-auto max-w-screen-lg md:px-8">
+        <div className="max-w-screen-lg px-4 mx-auto md:px-8">
           <div className="grid gap-8 sm:grid-cols-2">
-            <div className="overflow-hidden h-80 bg-gray-100 rounded-lg md:h-auto">
+            <div className="overflow-hidden bg-gray-100 rounded-lg h-80 md:h-auto">
               <img
                 src="https://img.freepik.com/premium-photo/broken-bottle-isolated-white-background_51524-17283.jpg?w=1060"
                 loading="lazy"
@@ -20,7 +20,7 @@ const Home = () => {
               />
             </div>
 
-            <div className="flex flex-col justify-center items-center sm:items-start md:py-24 lg:py-32">
+            <div className="flex flex-col items-center justify-center sm:items-start md:py-24 lg:py-32">
               <p className="mb-4 text-sm font-semibold uppercase text-primaryGreen md:text-base">
                 Error 404
               </p>
@@ -51,4 +51,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Error;

@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
-import { Helmet } from "react-helmet-async";
 import helmetData from "@/json/helmetData";
 import AnimatedPageSliderData from "../json/AnimatedPageSliderData";
 
@@ -9,7 +8,7 @@ import {
   getLanguage,
 } from "../context/GlobalContextProvider";
 
-import HeroMotionSlide from "../components/gsap/HeroMotionSlide";
+import HeroMotionSlide from "../components/hero/HeroMotionSlide";
 import LirGridBento from "../components/LirGridBento";
 import LirHelmet from "../components/layout/LirHelmet";
 
@@ -47,8 +46,6 @@ const Home = () => {
         // !import.meta.env.DEV &&
         globalState.welcome && <HeroMotionSlide endAction={welcomeFinished} />
       }
-      {/* {globalState.welcome && <HeroTextSlideIn endAction={welcomeFinished} />} */}
-
       {/* this is hidden by the text color and4 the navbar */}
       <h1 className="text-primaryGreen bg-primaryGreen">
         The Lir Berlin - Great Drinks, Live Sports & Warm Hospitality
