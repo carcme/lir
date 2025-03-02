@@ -28,12 +28,11 @@ import {
 import { useLirMenuStore } from "../../store";
 
 export const Footer = () => {
+  const { lirDocs } = useLirMenuStore();
+  const menuDoc = lirDocs.find((doc) => doc.type === "menu");
+
   const globalState = useContext(GlobalStateContext);
   const text = getLanguage(globalState.lang, navData);
-
-  const menuDoc = useLirMenuStore
-    .getState()
-    .lirDocs.find((doc) => doc.type === "menu");
 
   return (
     <div id="footer" className="relative w-full h-full bg-cover">
