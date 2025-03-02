@@ -124,7 +124,7 @@ export const Footer = () => {
                     ))}
                     <li className="relative ml-2 translate-x-[-5px] cursor-pointer py-1.5 uppercase duration-200 before:absolute before:-left-5 before:top-[14px] before:block before:h-1.5 before:w-1.5 before:rounded-full before:bg-transparent before:font-normal before:transition-all before:duration-200 before:content-[''] hover:text-white hover:before:bg-white">
                       <a
-                        href={menuDoc.doc.url}
+                        href={menuDoc?.doc.url}
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="menu"

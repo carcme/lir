@@ -1,7 +1,7 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import helmetData from "@/json/helmetData";
 import AnimatedPageSliderData from "../json/AnimatedPageSliderData";
-
+import AnimatedPageSlider from "../components/hero/AnimatedPageSlider";
 import {
   GlobalDispatchContext,
   GlobalStateContext,
@@ -44,13 +44,16 @@ const Home = () => {
       />
       {
         // !import.meta.env.DEV &&
-        globalState.welcome && <HeroMotionSlide endAction={welcomeFinished} />
+        !import.meta.env.DEV && globalState.welcome && (
+          <HeroMotionSlide endAction={welcomeFinished} />
+        )
       }
       {/* this is hidden by the text color and4 the navbar */}
       <h1 className="text-primaryGreen bg-primaryGreen">
         The Lir Berlin - Great Drinks, Live Sports & Warm Hospitality
       </h1>
 
+      {/* Add a screen size check and show if desktop. Show Bento otherwise*/}
       {/* <AnimatedPageSlider data={data} /> */}
       <div
         ref={scrollTo}

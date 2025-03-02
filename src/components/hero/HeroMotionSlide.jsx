@@ -5,7 +5,7 @@ import Rays from "./Rays";
 const HeroMotionSlide = ({ endAction }) => {
   useEffect(() => {
     setTimeout(() => {
-      !import.meta.env.DEV && endAction();
+      endAction();
     }, 5500);
   }, []);
 
